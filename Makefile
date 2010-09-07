@@ -6,3 +6,9 @@ all:
 %.o:%.c
 	@ $(CC) -o $@ -c $< $(CFLAGS)
 
+clean:
+	@(cd src && $(MAKE) clean)
+
+meproper: clean
+	@(cd lib && $(MAKE) mrproper)
+
