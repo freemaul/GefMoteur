@@ -1,3 +1,5 @@
+export CC=g++
+export CFLAGS=-W
 
 
 all:
