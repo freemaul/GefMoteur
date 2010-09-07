@@ -19,11 +19,6 @@ namespace GefRender
 		void Dessine();
 	};
 
-	class RenderTarget
-	{
-	public:
-	};
-
 }; // GefRender
 }; // GefMoteur
 
