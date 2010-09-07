@@ -4,7 +4,7 @@ OBJ=$(SRC:.cpp=.o)
 all:test
 
 test: $(OBJ)
-	@$(CC) -o test -L ../lib/ $(OBJ) -lGefMoteur
+	@$(CC) -o test -L ../lib/ $(OBJ) -lGefMoteur -lsfml-system -lsfml-graphics
 
 %.o:%.cpp
 	@$(CC) -o $@ -c $< $(CFLAGS) $(INC_PATH)

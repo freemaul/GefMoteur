@@ -2,10 +2,33 @@
 #include <cstdlib>
 #include <iostream>
 
+#include <SFML/Window.hpp>
+
 int main(int argc,char *argv[])
 {
 	std::cout << "Helloworld" << std::endl;
 	std::cout << "Version " << GefMoteur::Version << std::endl;
+
+	sf::Window App(sf::VideoMode(800, 600, 32), "SFML Window");
+
+	bool Running = true;
+	while (Running)
+	{
+		sf::Event Event;
+		while (App.GetEvent(Event))
+		{
+			// Fenêtre fermée
+			if (Event.Type == sf::Event::Closed)
+				Running = false;
+
+			// Touche 'echap' appuyée
+			if ((Event.Type == sf::Event::KeyPressed) && (Event.Key.Code == sf::Key::Escape))
+				Running = false;
+		}
+
+		App.Display();
+	}
+
 
 	return 0;
 }
