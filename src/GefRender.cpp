@@ -11,3 +11,10 @@ void Dessinable::Cache(bool cache)
 {
 	this->cache = cache;
 }
+
+void Dessinable::Dessine()
+{
+	if(!cache)
+		En_Dessine();
+}
+
