@@ -2,13 +2,23 @@
 using namespace GefMoteur::GefRenderSfml;
 using namespace GefMoteur::GefRender;
 
-void DessinableSfml::Dessine(RenderTarget& rt)
+
+DessinableSfml::DessinableSfml(RenderTargetSfml& rtsfml) : rendertarget(rtsfml) , Dessinable()
 {
 
 }
 
-
-void RenderTargetSfml::Dessine(Dessinable& d)
+void DessinableSfml::En_Dessine()
 {
-
+	rendertarget.Draw(*d);
 }
+
+
+
+
+SpriteSfml::SpriteSfml(RenderTargetSfml& rtsfml) : DessinableSfml(rtsfml)
+{
+	d = new sf::Sprite();
+}
+
+

@@ -8,17 +8,27 @@ namespace GefMoteur
 {
 namespace GefRenderSfml
 {
-	class DessinableSfml 	: public GefMoteur::GefRender::Dessinable
+	class RenderTargetSfml : public sf::RenderTarget
 	{
-	public:
-		virtual void Dessine(GefRender::RenderTarget&);
 	};
 
-	class RenderTargetSfml 	: public GefMoteur::GefRender::RenderTarget
+	class DessinableSfml : public GefRender::Dessinable
+	{
+	protected:
+		sf::Drawable* d;
+		RenderTargetSfml& rendertarget;
+		virtual void En_Dessine();
+	public:
+		DessinableSfml(RenderTargetSfml&);
+		
+	};
+
+	class SpriteSfml : public DessinableSfml
 	{
 	public:
-		virtual void Dessine(GefRender::Dessinable&);
+		SpriteSfml(RenderTargetSfml&);
 	};
+
 
 }; // GefRender
 }; // GefMoteur

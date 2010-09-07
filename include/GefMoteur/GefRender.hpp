@@ -12,16 +12,16 @@ namespace GefRender
 	{
 	protected:
 		bool cache;
+		virtual void En_Dessine()=0;
 	public:
 		Dessinable();
-		virtual void Dessine(RenderTarget&)=0;
 		void Cache(bool);
+		void Dessine();
 	};
 
 	class RenderTarget
 	{
 	public:
-		virtual void Dessine(Dessinable&)=0;
 	};
 
 }; // GefRender
