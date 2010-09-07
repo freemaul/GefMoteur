@@ -7,7 +7,7 @@ all:
 	@(cd src && $(MAKE))
 
 test:all
-	@ (cd test && $(MAKE))
+	@(cd test && $(MAKE))
 
 clean:
 	@(cd src && $(MAKE) clean)
