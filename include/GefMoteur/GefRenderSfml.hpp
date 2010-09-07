@@ -23,6 +23,7 @@ namespace GefRenderSfml
 	{
 	public:
 		SpriteSfml(sf::RenderTarget&);
+		void SetImage(sf::Image&);
 	};
 
 
