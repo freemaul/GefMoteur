@@ -21,4 +21,7 @@ SpriteSfml::SpriteSfml(sf::RenderTarget& rtsfml) : DessinableSfml(rtsfml)
 	d = new sf::Sprite();
 }
 
-
+void SpriteSfml::SetImage(sf::Image& image)
+{
+	((sf::Sprite*)d)->SetImage(image);
+}
