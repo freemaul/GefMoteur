@@ -6,9 +6,6 @@ all:test
 test: $(OBJ)
 	@$(CC) -o test -L ../lib/ $(OBJ) -lGefMoteur
 
-runtest: test
-	@./test/test
-
 %.o:%.cpp
 	@$(CC) -o $@ -c $< $(CFLAGS) $(INC_PATH)
 
