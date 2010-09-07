@@ -4,17 +4,17 @@ OBJ=$(SRC:.cpp=.o)
 all:test
 
 test: $(OBJ)
-	$(CC) -o test -L ../lib/ $(OBJ) -lGefMoteur
+	@$(CC) -o test -L ../lib/ $(OBJ) -lGefMoteur
 
 runtest: test
-	./test/test
+	@./test/test
 
 %.o:%.cpp
-	$(CC) -o $@ -c $< $(CFLAGS) $(INC_PATH)
+	@$(CC) -o $@ -c $< $(CFLAGS) $(INC_PATH)
 
 clean:
-	rm -f ./*.o
+	@rm -f ./*.o
 
 mrproper: clean
-	rm -f ./test
+	@rm -f ./test
 

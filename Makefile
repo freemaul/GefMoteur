@@ -9,6 +9,9 @@ all:
 test:all
 	@(cd test && $(MAKE))
 
+runtest: test
+	@./test/test
+
 clean:
 	@(cd src && $(MAKE) clean)
 	@(cd test && $(MAKE) clean)
