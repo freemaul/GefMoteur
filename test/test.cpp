@@ -12,7 +12,11 @@ int main(int argc,char *argv[])
 
 	sf::RenderWindow App(sf::VideoMode(800, 600, 32), "SFML Window");
 
+	sf::Image image;
 	GefMoteur::GefRenderSfml::SpriteSfml monsp(App);
+
+	image.LoadFromFile("test.bmp");
+	monsp.SetImage(image);
 
 	bool Running = true;
 	while (Running)
@@ -28,6 +32,8 @@ int main(int argc,char *argv[])
 			if ((Event.Type == sf::Event::KeyPressed) && (Event.Key.Code == sf::Key::Escape))
 				Running = false;
 		}
+
+		monsp.Dessine();
 
 		App.Display();
 	}
