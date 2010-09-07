@@ -10,7 +10,7 @@ test:all
 	@(cd test && $(MAKE))
 
 runtest: test
-	@./test/test
+	@(cd test && ./test)
 
 clean:
 	@(cd src && $(MAKE) clean)
