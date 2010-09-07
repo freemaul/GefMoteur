@@ -1,6 +1,6 @@
 export CC=g++
 export CFLAGS=-W
-
+export INST_PATH=$(PWD)/lib
 
 all:
 	@(cd src && $(MAKE))
