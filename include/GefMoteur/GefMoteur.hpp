@@ -4,12 +4,12 @@ license à ajouter
 
 */
 
-#ifndef GefMoteur
-#define GefMoteur
+#ifndef GEFMOTEUR_HPP
+#define GEFMOTEUR_HPP
 
 namespace GefMoteur
 {
-extern const char* Version;
-
+	extern const char Version[];
 };
 #endif
+

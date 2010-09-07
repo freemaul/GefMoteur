@@ -1,7 +1,7 @@
 export CC=g++
 export CFLAGS=-W
 export INST_PATH=$(PWD)/lib
-export INC_PATH=$(PWD)/include
+export INC_PATH=-I $(PWD)/include
 
 all:
 	@(cd src && $(MAKE))
@@ -11,7 +11,9 @@ test:all
 
 clean:
 	@(cd src && $(MAKE) clean)
+	@(cd test && $(MAKE) clean)
 
-meproper: clean
+mrproper: clean
 	@(cd lib && $(MAKE) mrproper)
+	@(cd test && $(MAKE) mrproper)
 

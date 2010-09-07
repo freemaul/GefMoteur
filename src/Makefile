@@ -1,4 +1,5 @@
-OBJ=$(SRC:.cpp=.o)
+SRC= GefMoteur.cpp
+OBJ= $(SRC:.cpp=.o)
 
 all:$(INST_PATH)/libGefMoteur.a
 
@@ -7,4 +8,8 @@ $(INST_PATH)/libGefMoteur.a: $(OBJ)
 	ar r $(INST_PATH)/libGefMoteur.a $(OBJ)
 
 %.o:%.cpp
-	@ $(CC) -o $@ -c $< $(CFLAGS) $(INC_PATH)
+	$(CC) -o $@ -c $< $(CFLAGS) $(INC_PATH)
+
+clean:
+	rm -f ./*.o
+

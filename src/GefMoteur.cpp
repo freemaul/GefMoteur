@@ -1,8 +1,4 @@
 #include <GefMoteur/GefMoteur.hpp>
 
-namespace GefMoteur
-{
-	const char* Version="0.B";
-
-};
+const char GefMoteur::Version[]="0.B";
 
