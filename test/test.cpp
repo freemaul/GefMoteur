@@ -15,7 +15,7 @@ int main(int argc,char *argv[])
 	sf::Image image;
 	GefMoteur::GefRenderSfml::SpriteSfml monsp(App);
 
-	image.LoadFromFile("test.jpg");
+	image.LoadFromFile("test.bmp");
 	monsp.SetImage(image);
 
 	bool Running = true;
