@@ -1,4 +1,5 @@
 #include <GefMoteur/GefMoteur.hpp>
+#include <GefMoteur/GefRenderSfml.hpp>
 #include <cstdlib>
 #include <iostream>
 
@@ -9,7 +10,9 @@ int main(int argc,char *argv[])
 	std::cout << "Helloworld" << std::endl;
 	std::cout << "Version " << GefMoteur::Version << std::endl;
 
-	sf::Window App(sf::VideoMode(800, 600, 32), "SFML Window");
+	sf::RenderWindow App(sf::VideoMode(800, 600, 32), "SFML Window");
+
+	GefMoteur::GefRenderSfml::SpriteSfml monsp(App);
 
 	bool Running = true;
 	while (Running)
