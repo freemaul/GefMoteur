@@ -8,6 +8,9 @@ all:
 %.o:%.c
 	@ $(CC) -o $@ -c $< $(CFLAGS)
 
+test:all
+	@ (cd test && $(MAKE))
+
 clean:
 	@(cd src && $(MAKE) clean)
 
