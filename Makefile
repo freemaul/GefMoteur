@@ -1,6 +1,7 @@
 export CC=g++
 export CFLAGS=-W
 export INST_PATH=$(PWD)/lib
+export INC_PATH=$(PWD)/include
 
 all:
 	@(cd src && $(MAKE))
