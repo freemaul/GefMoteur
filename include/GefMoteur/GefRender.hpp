@@ -19,6 +19,18 @@ namespace GefRender
 		void Dessine();
 	};
 
+	class Animable
+	{
+	protected:
+		int current;
+		Dessinable& dessinable;
+		virtual void En_Maj()=0;
+	public:
+		Animable(Dessinable&);
+		void Maj();
+		const Dessinable& Donne_Dessinable();
+	};
+
 }; // GefRender
 }; // GefMoteur
 

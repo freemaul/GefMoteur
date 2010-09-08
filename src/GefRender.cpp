@@ -18,3 +18,19 @@ void Dessinable::Dessine()
 		En_Dessine();
 }
 
+
+Animable::Animable(Dessinable& d) : dessinable(d)
+{
+	current = 0;
+}
+
+void Animable::Maj()
+{
+	En_Maj();
+}
+
+const Dessinable& Animable::Donne_Dessinable()
+{
+	return dessinable;
+}
+
