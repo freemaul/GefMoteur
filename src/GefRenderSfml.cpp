@@ -3,30 +3,31 @@ using namespace GefMoteur::GefRenderSfml;
 using namespace GefMoteur::GefRender;
 
 
-DessinableSfml::DessinableSfml(sf::RenderTarget& rtsfml) : rendertarget(rtsfml) , Dessinable()
+DessinableSfml::DessinableSfml(sf::Drawable& d,sf::RenderTarget& rtsfml) : drawable(d), rendertarget(rtsfml) , Dessinable()
 {
 
 }
 
 void DessinableSfml::En_Dessine() const
 {
-	rendertarget.Draw(*d);
+	rendertarget.Draw(drawable);
 }
 
 
 
 
-SpriteSfml::SpriteSfml(sf::RenderTarget& rtsfml) : DessinableSfml(rtsfml)
+SpriteSfml::SpriteSfml(sf::RenderTarget& rtsfml) : dessinablesfml(sprite,rtsfml) , Sprite(dessinablesfml)
 {
-	d = new sf::Sprite();
+
 }
 
-void SpriteSfml::SetImage(sf::Image& image)
+void SpriteSfml::Donne_Image(void* image)
 {
-	((sf::Sprite*)d)->SetImage(image);
+//	((sf::Sprite*)d)->SetImage(image);
+	sprite.SetImage(*(sf::Image*)image);
 }
 
-
+/*
 AnimableSfml::AnimableSfml(sf::RenderTarget& rtsfml) : spritesfml(rtsfml) , Animable(spritesfml)
 {
 
@@ -36,4 +37,4 @@ void AnimableSfml::En_Maj()
 {
 
 }
-
+*/
