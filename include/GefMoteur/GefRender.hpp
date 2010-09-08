@@ -32,12 +32,12 @@ namespace GefRender
 	{
 	protected:
 		int current;
-		Dessinable& dessinable;
+		Sprite& sprite;
 		virtual void En_Maj()=0;
 	public:
-		Animable(Dessinable&);
+		Animable(Sprite&);
 		void Maj();
-		const Dessinable& Donne_Dessinable();
+		const Sprite& Donne_Sprite();
 	};
 
 }; // GefRender

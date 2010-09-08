@@ -25,7 +25,7 @@ Sprite::Sprite(Dessinable& d) : dessinable(d)
 }
 
 
-Animable::Animable(Dessinable& d) : dessinable(d)
+Animable::Animable(Sprite& sp) : sprite(sp)
 {
 	current = 0;
 }
@@ -35,8 +35,8 @@ void Animable::Maj()
 	En_Maj();
 }
 
-const Dessinable& Animable::Donne_Dessinable()
+const Sprite& Animable::Donne_Sprite()
 {
-	return dessinable;
+	return sprite;
 }
 
