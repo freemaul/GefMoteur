@@ -12,9 +12,31 @@ void Dessinable::Cache(bool cache)
 	this->cache = cache;
 }
 
-void Dessinable::Dessine()
+void Dessinable::Dessine() const
 {
 	if(!cache)
 		En_Dessine();
+}
+
+
+Sprite::Sprite(Dessinable& d) : dessinable(d)
+{
+
+}
+
+
+Animable::Animable(Sprite& sp) : sprite(sp)
+{
+	current = 0;
+}
+
+void Animable::Maj()
+{
+	En_Maj();
+}
+
+const Sprite& Animable::Donne_Sprite()
+{
+	return sprite;
 }
 

@@ -11,22 +11,33 @@ namespace GefRenderSfml
 	class DessinableSfml : public GefRender::Dessinable
 	{
 	protected:
-		sf::Drawable* d;
+		sf::Drawable& drawable;
 		sf::RenderTarget& rendertarget;
-		virtual void En_Dessine();
+		virtual void En_Dessine() const;
 	public:
-		DessinableSfml(sf::RenderTarget&);
+		DessinableSfml(sf::Drawable&,sf::RenderTarget&);
 		
 	};
 
-	class SpriteSfml : public DessinableSfml
+	class SpriteSfml : public GefRender::Sprite
 	{
+	protected:
+		sf::Sprite sprite;
+		DessinableSfml dessinablesfml;
 	public:
 		SpriteSfml(sf::RenderTarget&);
-		void SetImage(sf::Image&);
+		virtual void Donne_Image(void* image);
 	};
-
-
+/*
+	class AnimableSfml : public GefRender::Animable
+	{
+	protected:
+		SpriteSfml spritesfml;
+		virtual void En_Maj();
+	public:
+		AnimableSfml(sf::RenderTarget&);
+	};
+*/
 }; // GefRender
 }; // GefMoteur
 
