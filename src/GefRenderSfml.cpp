@@ -8,7 +8,7 @@ DessinableSfml::DessinableSfml(sf::RenderTarget& rtsfml) : rendertarget(rtsfml) 
 
 }
 
-void DessinableSfml::En_Dessine()
+void DessinableSfml::En_Dessine() const
 {
 	rendertarget.Draw(*d);
 }
@@ -25,3 +25,15 @@ void SpriteSfml::SetImage(sf::Image& image)
 {
 	((sf::Sprite*)d)->SetImage(image);
 }
+
+
+AnimableSfml::AnimableSfml(sf::RenderTarget& rtsfml) : spritesfml(rtsfml) , Animable(spritesfml)
+{
+
+}
+
+void AnimableSfml::En_Maj()
+{
+
+}
+
