@@ -28,7 +28,7 @@ namespace GefRenderSfml
 		SpriteSfml(sf::RenderTarget&);
 		virtual void Donne_Image(void* image);
 	};
-/*
+
 	class AnimableSfml : public GefRender::Animable
 	{
 	protected:
@@ -37,7 +37,7 @@ namespace GefRenderSfml
 	public:
 		AnimableSfml(sf::RenderTarget&);
 	};
-*/
+
 }; // GefRender
 }; // GefMoteur
 

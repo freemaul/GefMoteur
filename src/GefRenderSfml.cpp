@@ -26,7 +26,7 @@ void SpriteSfml::Donne_Image(void* image)
 	sprite.SetImage(*(sf::Image*)image);
 }
 
-/*
+
 AnimableSfml::AnimableSfml(sf::RenderTarget& rtsfml) : spritesfml(rtsfml) , Animable(spritesfml)
 {
 
@@ -36,4 +36,4 @@ void AnimableSfml::En_Maj()
 {
 
 }
-*/
+
