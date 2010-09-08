@@ -23,7 +23,6 @@ SpriteSfml::SpriteSfml(sf::RenderTarget& rtsfml) : dessinablesfml(sprite,rtsfml)
 
 void SpriteSfml::Donne_Image(void* image)
 {
-//	((sf::Sprite*)d)->SetImage(image);
 	sprite.SetImage(*(sf::Image*)image);
 }
 
