@@ -2,6 +2,7 @@
 #define GEFMOTEUR_GEFSYSTEMSFML_HPP
 
 #include <GefMoteur/GefSystem.hpp>
+#include <SFML/System.hpp>
 
 namespace GefMoteur
 {

@@ -1,4 +1,4 @@
-SRC= GefMoteur.cpp GefRender.cpp GefRenderSfml.cpp
+SRC= GefMoteur.cpp GefRender.cpp GefRenderSfml.cpp GefSystemSfml.cpp
 OBJ= $(SRC:.cpp=.o)
 
 all:$(INST_PATH)/libGefMoteur.a
