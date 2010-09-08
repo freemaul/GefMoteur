@@ -12,11 +12,11 @@ namespace GefRender
 	{
 	protected:
 		bool cache;
-		virtual void En_Dessine()=0;
+		virtual void En_Dessine() const =0;
 	public:
 		Dessinable();
 		void Cache(bool);
-		void Dessine();
+		void Dessine() const;
 	};
 
 	class Animable
