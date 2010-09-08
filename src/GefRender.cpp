@@ -24,6 +24,11 @@ Sprite::Sprite(Dessinable& d) : dessinable(d)
 
 }
 
+const Dessinable& Sprite::Donne_Dessinable()
+{
+	return dessinable;
+}
+
 
 Animable::Animable(Sprite& sp) : sprite(sp)
 {

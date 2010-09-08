@@ -25,6 +25,7 @@ namespace GefRender
 		Dessinable& dessinable;
 	public:
 		Sprite(Dessinable&);
+		const Dessinable& Donne_Dessinable();
 		virtual void Donne_Image(void* image)=0;
 	};
 
