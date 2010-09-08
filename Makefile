@@ -6,6 +6,10 @@ export INC_PATH=-I $(PWD)/include
 all:
 	@(cd src && $(MAKE))
 
+install: all
+	@(cp lib/*.a /usr/lib/)
+	@(cp -R include/* /usr/include/)
+
 test:all
 	@(cd test && $(MAKE))
 
