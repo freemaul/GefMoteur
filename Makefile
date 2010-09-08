@@ -10,17 +10,17 @@ install: all
 	@(cp lib/*.a /usr/lib/)
 	@(cp -R include/* /usr/include/)
 
-test:all
-	@(cd test && $(MAKE))
+testsfml:all
+	@(cd test/testsfml && $(MAKE))
 
-runtest: test
-	@(cd test && ./test)
+runtestsfml: testsfml
+	@(cd test/testsfml && ./test)
 
 clean:
 	@(cd src && $(MAKE) clean)
-	@(cd test && $(MAKE) clean)
+	@(cd test/testsfml && $(MAKE) clean)
 
 mrproper: clean
 	@(cd lib && $(MAKE) mrproper)
-	@(cd test && $(MAKE) mrproper)
+	@(cd test/testsfml && $(MAKE) mrproper)
 
