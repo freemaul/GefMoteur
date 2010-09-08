@@ -26,7 +26,7 @@ namespace GefRenderSfml
 		DessinableSfml dessinablesfml;
 	public:
 		SpriteSfml(sf::RenderTarget&);
-		virtual void Donne_Image(void* image);
+		virtual void Definit_Image(void* image);
 	};
 
 	class AnimableSfml : public GefRender::Animable

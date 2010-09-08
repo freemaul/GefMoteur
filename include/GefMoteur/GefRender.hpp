@@ -26,7 +26,7 @@ namespace GefRender
 	public:
 		Sprite(Dessinable&);
 		const Dessinable& Donne_Dessinable();
-		virtual void Donne_Image(void* image)=0;
+		virtual void Definit_Image(void* image)=0;
 	};
 
 	class Animable
