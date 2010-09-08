@@ -10,6 +10,10 @@ install: all
 	@(cp lib/*.a /usr/lib/)
 	@(cp -R include/* /usr/include/)
 
+uninstall:
+	@(rm -f /usr/lib/libGefMoteur.a)
+	@(rm -f -R /usr/include/GefMoteur)
+
 testsfml:all
 	@(cd test/testsfml && $(MAKE))
 
