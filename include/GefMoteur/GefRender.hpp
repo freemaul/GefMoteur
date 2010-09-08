@@ -19,6 +19,15 @@ namespace GefRender
 		void Dessine() const;
 	};
 
+	class Sprite
+	{
+	protected:
+		Dessinable& dessinable;
+	public:
+		Sprite(Dessinable&);
+		virtual void Donne_Image(void* image)=0;
+	};
+
 	class Animable
 	{
 	protected:

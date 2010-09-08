@@ -19,6 +19,12 @@ void Dessinable::Dessine() const
 }
 
 
+Sprite::Sprite(Dessinable& d) : dessinable(d)
+{
+
+}
+
+
 Animable::Animable(Dessinable& d) : dessinable(d)
 {
 	current = 0;
