@@ -1,6 +1,8 @@
 #ifndef GEFMOTEUR_GEFRENDER_HPP
 #define GEFMOTEUR_GEFRENDER_HPP
 
+#include <vector>
+
 namespace GefMoteur
 {
 namespace GefRender
@@ -40,6 +42,23 @@ namespace GefRender
 		void Maj();
 		const Sprite& Donne_Sprite();
 	};
+
+	class Scene_directeur
+	{
+	protected:
+		std::vector<const Dessinable*> dessinables;
+		std::vector<Animable*> animables;
+	public:
+		Scene_directeur& operator << (const Dessinable&);
+		Scene_directeur& operator << (const Sprite&);
+		Scene_directeur& operator << (Animable&);
+
+		Scene_directeur& operator >> (const Dessinable&);
+		Scene_directeur& operator >> (const Sprite&);
+		Scene_directeur& operator >> (Animable&);
+		void Maj();
+	};
+
 
 }; // GefRender
 }; // GefMoteur

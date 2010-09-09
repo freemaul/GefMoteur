@@ -45,3 +45,24 @@ const Sprite& Animable::Donne_Sprite()
 	return sprite;
 }
 
+
+
+Scene_directeur& Scene_directeur::operator << (const Dessinable& d)
+{
+	dessinables.push_back(&d);
+	return *this;
+}
+
+Scene_directeur& Scene_directeur::operator << (const Sprite& s)
+{
+	*this << s.Donne_Dessinable();
+	return *this;
+}
+
+Scene_directeur& Scene_directeur::operator << (Animable& a)
+{
+
+	return *this;
+}
+
+
