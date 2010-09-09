@@ -37,6 +37,7 @@ namespace GefRenderSfml
 		SpriteSfml spritesfml;
 	public:
 		AnimableSfml(sf::RenderTarget&);
+		virtual void Definit_Image(void* image);
 	};
 
 }; // GefRender

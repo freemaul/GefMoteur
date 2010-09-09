@@ -42,4 +42,7 @@ AnimableSfml::AnimableSfml(sf::RenderTarget& rtsfml) : spritesfml(rtsfml) , Anim
 
 }
 
-
+void AnimableSfml::Definit_Image(void* image)
+{
+	spritesfml.Definit_Image(image);
+}

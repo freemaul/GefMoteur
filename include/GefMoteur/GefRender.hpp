@@ -52,6 +52,7 @@ namespace GefRender
 		int ta_image_x,ta_image_y;
 
 		Animable(Sprite&);
+		virtual void Definit_Image(void *image)=0;
 		void Maj(float);
 		const Sprite& Donne_Sprite() const;
 	};
