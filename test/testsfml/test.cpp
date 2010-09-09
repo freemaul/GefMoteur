@@ -16,7 +16,7 @@ int main(int argc,char *argv[])
 	sf::Image image;
 	GefMoteur::GefRenderSfml::SpriteSfml monsp(App);
 
-	image.LoadFromFile("test.bmp");
+	image.LoadFromFile("mario.png");
 	monsp.Definit_Image(&image);
 
 	GefMoteur::GefSystemSfml::HorlogeSfml horloge;
