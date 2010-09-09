@@ -34,7 +34,6 @@ int main(int argc,char *argv[])
 	GefMoteur::GefSystemSfml::Entree::SourieSfml sourie(App);
 
 	scdir << monsp << animation1;
-//	scdir << animation1;
 
 	bool Running = true;
 	while (Running)
