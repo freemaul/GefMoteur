@@ -12,6 +12,16 @@ namespace GefSystem
 		virtual float Temps()=0;	// donne le temps passé en seconde (nombre rationel)
 	};
 
+	namespace Entree
+	{
+		class Sourie
+		{
+		public:
+			virtual int Position_x()=0;
+			virtual int Position_y()=0;
+		};
+	};
+
 }; // GefSystem
 }; // GefMoteur
 
