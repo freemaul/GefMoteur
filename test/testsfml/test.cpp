@@ -1,5 +1,6 @@
 #include <GefMoteur/GefMoteur.hpp>
 #include <GefMoteur/GefRenderSfml.hpp>
+#include <GefMoteur/GefSystemSfml.hpp>
 #include <cstdlib>
 #include <iostream>
 
@@ -18,6 +19,11 @@ int main(int argc,char *argv[])
 	image.LoadFromFile("test.bmp");
 	monsp.Definit_Image(&image);
 
+	GefMoteur::GefSystemSfml::HorlogeSfml horloge;
+	GefMoteur::GefRender::Scene_directeur scdir(horloge);
+
+	scdir << monsp;
+
 	bool Running = true;
 	while (Running)
 	{
@@ -33,7 +39,7 @@ int main(int argc,char *argv[])
 				Running = false;
 		}
 
-		monsp.Donne_Dessinable().Dessine();
+		scdir.Dessine();
 
 		App.Display();
 	}
