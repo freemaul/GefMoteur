@@ -21,7 +21,9 @@ void Dessinable::Dessine() const
 
 Sprite::Sprite(Dessinable& d) : dessinable(d)
 {
-
+	posx=0;
+	posy=0;
+	En_Change_Position(0,0);
 }
 
 const Dessinable& Sprite::Donne_Dessinable() const
@@ -29,6 +31,17 @@ const Dessinable& Sprite::Donne_Dessinable() const
 	return dessinable;
 }
 
+void Sprite::Change_Position(int px,int py)
+{
+	posx = px;
+	posy = py;
+}
+
+void Sprite::Deplace(int mx,int my)
+{
+	posx += mx;
+	posy += my;
+}
 
 Animable::Animable(Sprite& sp) : sprite(sp)
 {

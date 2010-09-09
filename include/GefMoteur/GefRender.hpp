@@ -26,9 +26,15 @@ namespace GefRender
 	{
 	protected:
 		Dessinable& dessinable;
+		int posx,posy;
+		virtual void En_Change_Position(int,int)=0;
 	public:
 		Sprite(Dessinable&);
+
 		const Dessinable& Donne_Dessinable() const;
+		void Change_Position(int,int);
+		void Deplace(int,int);
+
 		virtual void Definit_Image(void* image)=0;
 	};
 
