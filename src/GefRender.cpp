@@ -46,6 +46,10 @@ const Sprite& Animable::Donne_Sprite() const
 }
 
 
+Scene_directeur::Scene_directeur(GefSystem::Horloge& h) : horloge(h)
+{
+
+}
 
 Scene_directeur& Scene_directeur::operator << (const Dessinable& d)
 {
@@ -65,4 +69,19 @@ Scene_directeur& Scene_directeur::operator << (Animable& a)
 	return *this;
 }
 
+
+
+
+void Scene_directeur::Maj()
+{
+
+}
+
+void Scene_directeur::Dessine()
+{
+	std::vector<Dessinable*>::size_type sz = dessinables.size();
+	unsigned int i;
+	for(i=0;i<sz;i++)
+		dessinables[i]->Dessine();
+}
 

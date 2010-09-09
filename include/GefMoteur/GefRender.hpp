@@ -2,6 +2,7 @@
 #define GEFMOTEUR_GEFRENDER_HPP
 
 #include <vector>
+#include <GefMoteur/GefSystem.hpp>
 
 namespace GefMoteur
 {
@@ -48,7 +49,10 @@ namespace GefRender
 	protected:
 		std::vector<const Dessinable*> dessinables;
 		std::vector<Animable*> animables;
+		GefSystem::Horloge& horloge;
 	public:
+		Scene_directeur(GefSystem::Horloge&);
+
 		Scene_directeur& operator << (const Dessinable&);
 		Scene_directeur& operator << (const Sprite&);
 		Scene_directeur& operator << (Animable&);
@@ -56,7 +60,9 @@ namespace GefRender
 		Scene_directeur& operator >> (const Dessinable&);
 		Scene_directeur& operator >> (const Sprite&);
 		Scene_directeur& operator >> (Animable&);
+
 		void Maj();
+		void Dessine();
 	};
 
 
