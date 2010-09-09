@@ -50,7 +50,6 @@ Animable::Animable(Sprite& sp) : sprite(sp)
 
 void Animable::Maj_Image()
 {
-// changement d'image
 	int px1,px2,py1,py2;
 
 	px1 = ( (current%nb_image_x) * ta_image_x ) / nb_image_x;
