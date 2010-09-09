@@ -27,7 +27,7 @@ namespace GefRender
 		Dessinable& dessinable;
 	public:
 		Sprite(Dessinable&);
-		const Dessinable& Donne_Dessinable();
+		const Dessinable& Donne_Dessinable() const;
 		virtual void Definit_Image(void* image)=0;
 	};
 
@@ -40,7 +40,7 @@ namespace GefRender
 	public:
 		Animable(Sprite&);
 		void Maj();
-		const Sprite& Donne_Sprite();
+		const Sprite& Donne_Sprite() const;
 	};
 
 	class Scene_directeur
