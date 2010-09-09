@@ -21,6 +21,9 @@ runtestsfml: testsfml
 	@(cd test/testsfml && ./test)
 
 testsystem:all
+	@(cd test/testsystem && $(MAKE))
+
+runtestsystem:testsystem
 	@(cd test/testsystem && ./test)
 
 clean:
