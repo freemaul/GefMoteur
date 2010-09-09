@@ -22,6 +22,8 @@ int main(int argc,char *argv[])
 	GefMoteur::GefSystemSfml::HorlogeSfml horloge;
 	GefMoteur::GefRender::Scene_directeur scdir(horloge);
 
+	GefMoteur::GefSystemSfml::Entree::SourieSfml sourie(App);
+
 	scdir << monsp;
 
 	bool Running = true;
@@ -39,7 +41,10 @@ int main(int argc,char *argv[])
 				Running = false;
 		}
 
-		scdir.Dessine();
+//		scdir.Dessine();
+		monsp.Donne_Dessinable().Dessine();
+		monsp.Change_Position(sourie.Position_x(),sourie.Position_y());
+		std::cout << sourie.Position_x() << std::endl;
 
 		App.Display();
 	}
