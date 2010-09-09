@@ -21,6 +21,11 @@ SpriteSfml::SpriteSfml(sf::RenderTarget& rtsfml) : dessinablesfml(sprite,rtsfml)
 
 }
 
+void SpriteSfml::En_Change_Position(int posx,int posy)
+{
+	sprite.SetPosition(posx,posy);
+}
+
 void SpriteSfml::Definit_Image(void* image)
 {
 	sprite.SetImage(*(sf::Image*)image);

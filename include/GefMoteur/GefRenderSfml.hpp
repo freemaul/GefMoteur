@@ -24,6 +24,7 @@ namespace GefRenderSfml
 	protected:
 		sf::Sprite sprite;
 		DessinableSfml dessinablesfml;
+		virtual void En_Change_Position(int,int);
 	public:
 		SpriteSfml(sf::RenderTarget&);
 		virtual void Definit_Image(void* image);
