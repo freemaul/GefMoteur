@@ -20,6 +20,9 @@ testsfml:all
 runtestsfml: testsfml
 	@(cd test/testsfml && ./test)
 
+testsystem:all
+	@(cd test/testsystem && ./test)
+
 clean:
 	@(cd src && $(MAKE) clean)
 	@(cd test/testsfml && $(MAKE) clean)
