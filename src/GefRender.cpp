@@ -100,7 +100,8 @@ Scene_directeur& Scene_directeur::operator << (const Sprite& s)
 
 Scene_directeur& Scene_directeur::operator << (Animable& a)
 {
-
+	animables.push_back(&a);
+	*this << a.Donne_Sprite();
 	return *this;
 }
 
