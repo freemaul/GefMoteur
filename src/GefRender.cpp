@@ -23,7 +23,6 @@ Sprite::Sprite(Dessinable& d) : dessinable(d)
 {
 	posx=0;
 	posy=0;
-	En_Change_Position(0,0);
 }
 
 const Dessinable& Sprite::Donne_Dessinable() const
