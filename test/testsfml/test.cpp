@@ -41,12 +41,11 @@ int main(int argc,char *argv[])
 				Running = false;
 		}
 
-//		scdir.Dessine();
-		monsp.Donne_Dessinable().Dessine();
+		scdir.Dessine();
 		monsp.Change_Position(sourie.Position_x(),sourie.Position_y());
-		std::cout << sourie.Position_x() << std::endl;
 
 		App.Display();
+		App.Clear();
 	}
 
 
