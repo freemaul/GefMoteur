@@ -3,6 +3,7 @@
 
 #include <GefMoteur/GefSystem.hpp>
 #include <SFML/System.hpp>
+#include <SFML/Graphics.hpp>
 
 namespace GefMoteur
 {
@@ -15,6 +16,19 @@ namespace GefSystemSfml
 	public:
 		virtual void Zero();	// remise a zero du compteur
 		virtual float Temps();	// donne le temps passé en seconde (nombre rationel)
+	};
+
+	namespace Entree
+	{
+		class SourieSfml : public GefSystem::Entree::Sourie
+		{
+		protected:
+			const sf::Input& inputsfml;
+		public:
+			SourieSfml(const sf::RenderWindow&);
+			virtual int Position_x();
+			virtual int Position_y();
+		};
 	};
 
 }; // GefSystemSfml
