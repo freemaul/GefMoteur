@@ -33,8 +33,8 @@ int main(int argc,char *argv[])
 
 	GefMoteur::GefSystemSfml::Entree::SourieSfml sourie(App);
 
-	scdir << monsp;
-	scdir << animation1;
+	scdir << monsp << animation1;
+//	scdir << animation1;
 
 	bool Running = true;
 	while (Running)
