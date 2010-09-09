@@ -21,6 +21,16 @@ SpriteSfml::SpriteSfml(sf::RenderTarget& rtsfml) : dessinablesfml(sprite,rtsfml)
 
 }
 
+void SpriteSfml::En_Change_Position(int posx,int posy)
+{
+	sprite.SetPosition(posx,posy);
+}
+
+void SpriteSfml::Definit_Rectangle(int px1,int py1,int px2,int py2)
+{
+	sprite.SetSubRect(sf::IntRect(px1,py1,px2,py2));
+}
+
 void SpriteSfml::Definit_Image(void* image)
 {
 	sprite.SetImage(*(sf::Image*)image);
@@ -32,8 +42,4 @@ AnimableSfml::AnimableSfml(sf::RenderTarget& rtsfml) : spritesfml(rtsfml) , Anim
 
 }
 
-void AnimableSfml::En_Maj()
-{
-
-}
 

@@ -26,21 +26,33 @@ namespace GefRender
 	{
 	protected:
 		Dessinable& dessinable;
+		int posx,posy;
+		virtual void En_Change_Position(int,int)=0;
 	public:
 		Sprite(Dessinable&);
+
 		const Dessinable& Donne_Dessinable() const;
+		void Change_Position(int,int);
+		void Deplace(int,int);
+
+		virtual void Definit_Rectangle(int px1,int py1,int px2,int py2)=0;
 		virtual void Definit_Image(void* image)=0;
 	};
 
 	class Animable
 	{
 	protected:
+		float temp_total;
 		int current;
 		Sprite& sprite;
-		virtual void En_Maj()=0;
+		void Maj_Image();
 	public:
+		float duree;
+		int nb_image_x,nb_image_y;
+		int ta_image_x,ta_image_y;
+
 		Animable(Sprite&);
-		void Maj();
+		void Maj(float);
 		const Sprite& Donne_Sprite() const;
 	};
 

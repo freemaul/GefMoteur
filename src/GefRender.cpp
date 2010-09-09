@@ -21,7 +21,9 @@ void Dessinable::Dessine() const
 
 Sprite::Sprite(Dessinable& d) : dessinable(d)
 {
-
+	posx=0;
+	posy=0;
+	En_Change_Position(0,0);
 }
 
 const Dessinable& Sprite::Donne_Dessinable() const
@@ -29,15 +31,48 @@ const Dessinable& Sprite::Donne_Dessinable() const
 	return dessinable;
 }
 
+void Sprite::Change_Position(int px,int py)
+{
+	posx = px;
+	posy = py;
+}
+
+void Sprite::Deplace(int mx,int my)
+{
+	posx += mx;
+	posy += my;
+}
 
 Animable::Animable(Sprite& sp) : sprite(sp)
 {
 	current = 0;
 }
 
-void Animable::Maj()
+void Animable::Maj_Image()
 {
-	En_Maj();
+	int px1,px2,py1,py2;
+
+	px1 = ( (current%nb_image_x) * ta_image_x ) / nb_image_x;
+	px2 = px1 + ta_image_x / nb_image_x;
+
+	py1 = ( (current / nb_image_x) * ta_image_y ) / nb_image_y;
+	py2 = py1 + ta_image_y / nb_image_y;
+
+	sprite.Definit_Rectangle(px1,py1,px2,py2);
+}
+
+void Animable::Maj(float temp)
+{
+	temp_total += temp;
+	if(temp_total > duree)
+	{
+		temp_total -= duree;
+		current++;
+		if(current >= nb_image_x*nb_image_y)
+			current = 0;
+		Maj_Image();
+	}
+
 }
 
 const Sprite& Animable::Donne_Sprite() const
@@ -69,12 +104,15 @@ Scene_directeur& Scene_directeur::operator << (Animable& a)
 	return *this;
 }
 
-
-
-
 void Scene_directeur::Maj()
 {
+	std::vector<Animable*>::size_type sz = animables.size();
+	float temps = horloge.Temps();
+	horloge.Zero();
 
+	unsigned int i;
+	for(i=0;i<sz;i++)
+		animables[i]->Maj(temps);
 }
 
 void Scene_directeur::Dessine()

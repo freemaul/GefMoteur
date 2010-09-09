@@ -24,8 +24,10 @@ namespace GefRenderSfml
 	protected:
 		sf::Sprite sprite;
 		DessinableSfml dessinablesfml;
+		virtual void En_Change_Position(int,int);
 	public:
 		SpriteSfml(sf::RenderTarget&);
+		virtual void Definit_Rectangle(int px1,int py1,int px2,int py2);
 		virtual void Definit_Image(void* image);
 	};
 
@@ -33,7 +35,6 @@ namespace GefRenderSfml
 	{
 	protected:
 		SpriteSfml spritesfml;
-		virtual void En_Maj();
 	public:
 		AnimableSfml(sf::RenderTarget&);
 	};
