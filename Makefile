@@ -26,8 +26,9 @@ testsystem:all
 clean:
 	@(cd src && $(MAKE) clean)
 	@(cd test/testsfml && $(MAKE) clean)
+	@(cd test/testsystem && $(MAKE) clean)
 
 mrproper: clean
 	@(cd lib && $(MAKE) mrproper)
 	@(cd test/testsfml && $(MAKE) mrproper)
-
+	@(cd test/testsystem && $(MAKE) mrproper)
