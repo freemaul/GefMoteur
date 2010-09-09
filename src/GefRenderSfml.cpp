@@ -37,8 +37,4 @@ AnimableSfml::AnimableSfml(sf::RenderTarget& rtsfml) : spritesfml(rtsfml) , Anim
 
 }
 
-void AnimableSfml::En_Maj()
-{
-
-}
 

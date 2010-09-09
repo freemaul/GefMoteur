@@ -34,7 +34,6 @@ namespace GefRenderSfml
 	{
 	protected:
 		SpriteSfml spritesfml;
-		virtual void En_Maj();
 	public:
 		AnimableSfml(sf::RenderTarget&);
 	};
