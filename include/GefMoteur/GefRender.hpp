@@ -35,6 +35,7 @@ namespace GefRender
 		void Change_Position(int,int);
 		void Deplace(int,int);
 
+		virtual void Definit_Rectangle(int px1,int py1,int px2,int py2)=0;
 		virtual void Definit_Image(void* image)=0;
 	};
 
