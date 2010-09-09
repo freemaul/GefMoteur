@@ -34,6 +34,7 @@ void Sprite::Change_Position(int px,int py)
 {
 	posx = px;
 	posy = py;
+	En_Change_Position(px,py);
 }
 
 void Sprite::Deplace(int mx,int my)
