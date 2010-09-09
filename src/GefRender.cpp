@@ -51,17 +51,25 @@ Animable::Animable(Sprite& sp) : sprite(sp)
 void Animable::Maj_Image()
 {
 // changement d'image
+	int px1,px2,py1,py2;
+
+	px1 = ( (current%nb_image_x) * ta_image_x ) / nb_image_x;
+	px2 = px1 + ta_image_x / nb_image_x;
+
+	py1 = ( (current / nb_image_x) * ta_image_y ) / nb_image_y;
+	py2 = py1 + ta_image_y / nb_image_y;
+
+	sprite.Definit_Rectangle(px1,py1,px2,py2);
 }
 
 void Animable::Maj(float temp)
 {
-//	En_Maj();
 	temp_total += temp;
 	if(temp_total > duree)
 	{
 		temp_total -= duree;
 		current++;
-		if(current > image_max)
+		if(current >= nb_image_x*nb_image_y)
 			current = 0;
 		Maj_Image();
 	}

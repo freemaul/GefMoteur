@@ -48,7 +48,8 @@ namespace GefRender
 		void Maj_Image();
 	public:
 		float duree;
-		int image_max;
+		int nb_image_x,nb_image_y;
+		int ta_image_x,ta_image_y;
 
 		Animable(Sprite&);
 		void Maj(float);
