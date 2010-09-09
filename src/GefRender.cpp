@@ -48,9 +48,24 @@ Animable::Animable(Sprite& sp) : sprite(sp)
 	current = 0;
 }
 
-void Animable::Maj()
+void Animable::Maj_Image()
 {
-	En_Maj();
+// changement d'image
+}
+
+void Animable::Maj(float temp)
+{
+//	En_Maj();
+	temp_total += temp;
+	if(temp_total > duree)
+	{
+		temp_total -= duree;
+		current++;
+		if(current > image_max)
+			current = 0;
+		Maj_Image();
+	}
+
 }
 
 const Sprite& Animable::Donne_Sprite() const
@@ -82,12 +97,15 @@ Scene_directeur& Scene_directeur::operator << (Animable& a)
 	return *this;
 }
 
-
-
-
 void Scene_directeur::Maj()
 {
+	std::vector<Animable*>::size_type sz = animables.size();
+	float temps = horloge.Temps();
+	horloge.Zero();
 
+	unsigned int i;
+	for(i=0;i<sz;i++)
+		animables[i]->Maj(temps);
 }
 
 void Scene_directeur::Dessine()

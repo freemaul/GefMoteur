@@ -41,12 +41,16 @@ namespace GefRender
 	class Animable
 	{
 	protected:
+		float temp_total;
 		int current;
 		Sprite& sprite;
-		virtual void En_Maj()=0;
+		void Maj_Image();
 	public:
+		float duree;
+		int image_max;
+
 		Animable(Sprite&);
-		void Maj();
+		void Maj(float);
 		const Sprite& Donne_Sprite() const;
 	};
 
