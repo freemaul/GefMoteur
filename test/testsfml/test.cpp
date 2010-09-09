@@ -13,12 +13,13 @@ int main(int argc,char *argv[])
 
 	sf::RenderWindow App(sf::VideoMode(800, 600, 32), "SFML Window");
 
-	sf::Image image;
+	sf::Image image,image2;
 	GefMoteur::GefRenderSfml::SpriteSfml monsp(App);
 	GefMoteur::GefRenderSfml::AnimableSfml animation1(App);
 
+	image2.LoadFromFile("test.bmp");
 	image.LoadFromFile("mario.png");
-	monsp.Definit_Image(&image);
+	monsp.Definit_Image(&image2);
 	animation1.Definit_Image(&image);
 	animation1.nb_image_x = 6;
 	animation1.nb_image_y = 4;
@@ -32,7 +33,7 @@ int main(int argc,char *argv[])
 
 	GefMoteur::GefSystemSfml::Entree::SourieSfml sourie(App);
 
-//	scdir << monsp;
+	scdir << monsp;
 	scdir << animation1;
 
 	bool Running = true;
@@ -52,6 +53,7 @@ int main(int argc,char *argv[])
 
 		scdir.Dessine();
 		monsp.Change_Position(sourie.Position_x(),sourie.Position_y());
+		scdir.Maj();
 
 		App.Display();
 		App.Clear();
