@@ -43,18 +43,18 @@ namespace GefRender
 	class Animable
 	{
 	protected:
-		float temp_total;
-		int current;
+		float 	temp_total;
+		int 	current;
 		Sprite& sprite;
-		void* image;
+		void* 	image;
+		float 	duree;
+		int 	nb_image_x,nb_image_y;
+		int 	ta_image_x,ta_image_y;
 
 		void Maj_Image();
-
-		float duree;
-		int nb_image_x,nb_image_y;
-		int ta_image_x,ta_image_y;
 	public:
 		Animable(Sprite&);
+
 		virtual void Definit_Image(void *image)=0;
 		void Definit_Image(void *image,int nb_image_x,int nb_image_y,int duree);
 		virtual void Definit_Image(const std::string& fichier_image)=0;
