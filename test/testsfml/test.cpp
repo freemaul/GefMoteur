@@ -20,13 +20,14 @@ int main(int argc,char *argv[])
 	image2.LoadFromFile("test.bmp");
 	image.LoadFromFile("mario.png");
 	monsp.Definit_Image(&image2);
-	animation1.Definit_Image(&image);
+	animation1.Definit_Image(&image,6,4,1.0);
+/*
 	animation1.nb_image_x = 6;
 	animation1.nb_image_y = 4;
 	animation1.ta_image_x = image.GetWidth();
 	animation1.ta_image_y = image.GetHeight();
 	animation1.duree = 1;
-
+*/
 
 	GefMoteur::GefSystemSfml::HorlogeSfml horloge;
 	GefMoteur::GefRender::Scene_directeur scdir(horloge);
