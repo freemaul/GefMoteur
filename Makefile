@@ -1,5 +1,5 @@
 export CC=g++
-export CFLAGS=-W
+export CFLAGS=-Wall
 export INST_PATH=$(PWD)/lib
 export INC_PATH=-I $(PWD)/include
 
