@@ -82,6 +82,7 @@ void Animable::Definit_Image_plus(void *image,int nb_image_x,int nb_image_y,floa
 	this->nb_image_x	= nb_image_x;
 	this->nb_image_y	= nb_image_y;
 	this->duree		= duree;
+	this->temp_total	= duree;
 }
 
 void Animable::Charge_Animation(const std::string& fichier_animation)
