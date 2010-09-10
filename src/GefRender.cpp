@@ -46,6 +46,7 @@ void Sprite::Deplace(int mx,int my)
 Animable::Animable(Sprite& sp) : sprite(sp)
 {
 	current = 0;
+	image = NULL;
 }
 
 void Animable::Maj_Image()

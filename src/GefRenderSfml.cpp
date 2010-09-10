@@ -42,7 +42,37 @@ AnimableSfml::AnimableSfml(sf::RenderTarget& rtsfml) : spritesfml(rtsfml) , Anim
 
 }
 
+AnimableSfml::~AnimableSfml()
+{
+	if(this->image != NULL)
+	{
+		delete (sf::Image*)(this->image);
+		this->image = NULL;
+	}
+}
+
 void AnimableSfml::Definit_Image(void* image)
 {
+	if(this->image != NULL)
+	{
+		delete (sf::Image*)(this->image);
+		this->image = NULL;
+	}
+
 	spritesfml.Definit_Image(image);
+	ta_image_x = ((sf::Image*)image)->GetWidth();
+	ta_image_y = ((sf::Image*)image)->GetHeight();
 }
+
+void AnimableSfml::Definit_Image(const std::string& fichier_image)
+{
+	if(image != NULL)
+		((sf::Image*)image)->LoadFromFile(fichier_image);
+	else
+	{
+		image = new sf::Image();
+		((sf::Image*)image)->LoadFromFile(fichier_image);
+	}
+	
+}
+

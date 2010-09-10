@@ -46,6 +46,8 @@ namespace GefRender
 		float temp_total;
 		int current;
 		Sprite& sprite;
+		void* image;
+
 		void Maj_Image();
 
 		float duree;
