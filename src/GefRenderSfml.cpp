@@ -3,7 +3,7 @@ using namespace GefMoteur::GefRenderSfml;
 using namespace GefMoteur::GefRender;
 
 
-DessinableSfml::DessinableSfml(sf::Drawable& d,sf::RenderTarget& rtsfml) : drawable(d), rendertarget(rtsfml) , Dessinable()
+DessinableSfml::DessinableSfml(sf::Drawable& d,sf::RenderTarget& rtsfml) : Dessinable(), drawable(d), rendertarget(rtsfml)
 {
 
 }
@@ -16,7 +16,7 @@ void DessinableSfml::En_Dessine() const
 
 
 
-SpriteSfml::SpriteSfml(sf::RenderTarget& rtsfml) : dessinablesfml(sprite,rtsfml) , Sprite(dessinablesfml)
+SpriteSfml::SpriteSfml(sf::RenderTarget& rtsfml) : Sprite(dessinablesfml), dessinablesfml(sprite,rtsfml)
 {
 
 }
@@ -37,7 +37,7 @@ void SpriteSfml::Definit_Image(void* image)
 }
 
 
-AnimableSfml::AnimableSfml(sf::RenderTarget& rtsfml) : spritesfml(rtsfml) , Animable(spritesfml)
+AnimableSfml::AnimableSfml(sf::RenderTarget& rtsfml) : Animable(spritesfml) , spritesfml(rtsfml)
 {
 
 }

@@ -31,7 +31,7 @@ namespace GefRenderSfml
 		virtual void Definit_Image(void* image);
 	};
 
-	class AnimableSfml : public GefRender::Animable
+	class AnimableSfml : public GefMoteur::GefRender::Animable
 	{
 	protected:
 		SpriteSfml spritesfml;

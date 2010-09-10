@@ -76,12 +76,17 @@ void Animable::Maj(float temp)
 
 }
 
-void Animable::Definit_Image(void *image,int nb_image_x,int nb_image_y,int duree)
+void Animable::Definit_Image(void *image,int nb_image_x,int nb_image_y,float duree)
 {
 	Definit_Image(image);
 	this->nb_image_x	= nb_image_x;
 	this->nb_image_y	= nb_image_y;
 	this->duree		= duree;
+}
+
+void Animable::Charge_Animation(const std::string& fichier_animation)
+{
+
 }
 
 const Sprite& Animable::Donne_Sprite() const

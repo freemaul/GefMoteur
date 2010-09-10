@@ -56,7 +56,7 @@ namespace GefRender
 		Animable(Sprite&);
 
 		virtual void Definit_Image(void *image)=0;
-		void Definit_Image(void *image,int nb_image_x,int nb_image_y,int duree);
+		void Definit_Image(void *image,int nb_image_x,int nb_image_y,float duree);
 		virtual void Definit_Image(const std::string& fichier_image)=0;
 		void Charge_Animation(const std::string& fichier_animation);
 
