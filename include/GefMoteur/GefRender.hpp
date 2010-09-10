@@ -46,11 +46,11 @@ namespace GefRender
 		int current;
 		Sprite& sprite;
 		void Maj_Image();
-	public:
+
 		float duree;
 		int nb_image_x,nb_image_y;
 		int ta_image_x,ta_image_y;
-
+	public:
 		Animable(Sprite&);
 		virtual void Definit_Image(void *image)=0;
 		void Definit_Image(void *image,int nb_image_x,int nb_image_y,int duree);
