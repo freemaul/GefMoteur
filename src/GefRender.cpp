@@ -75,6 +75,14 @@ void Animable::Maj(float temp)
 
 }
 
+void Animable::Definit_Image(void *image,int nb_image_x,int nb_image_y,int duree)
+{
+	Definit_Image(image);
+	this->nb_image_x	= nb_image_x;
+	this->nb_image_y	= nb_image_y;
+	this->duree		= duree;
+}
+
 const Sprite& Animable::Donne_Sprite() const
 {
 	return sprite;
