@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <GefMoteur/GefSystem.hpp>
+#include <string>
 
 namespace GefMoteur
 {
