@@ -20,7 +20,9 @@ int main(int argc,char *argv[])
 	image2.LoadFromFile("test.bmp");
 	image.LoadFromFile("mario.png");
 	monsp.Definit_Image(&image2);
-	animation1.Definit_Image((void*)&image,6,4,(float)1.0);
+//	animation1.Definit_Image((void*)&image,6,4,(float)1.0);
+	animation1.Definit_Image_plus(&image,6,4,1.0);
+
 /*
 	animation1.nb_image_x = 6;
 	animation1.nb_image_y = 4;

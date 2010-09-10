@@ -76,7 +76,7 @@ void Animable::Maj(float temp)
 
 }
 
-void Animable::Definit_Image(void *image,int nb_image_x,int nb_image_y,float duree)
+void Animable::Definit_Image_plus(void *image,int nb_image_x,int nb_image_y,float duree)
 {
 	Definit_Image(image);
 	this->nb_image_x	= nb_image_x;
