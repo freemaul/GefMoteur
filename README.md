@@ -7,5 +7,13 @@ Bibliothèque C++ pour création de jeux 2D
 * Version	: **0.B**
 * Auteur	: **freemaul**
 
+##Installations
+* make
+* sudo make install
 
+##Tests
+###Test du system GefMoteur
+* make runtestsystem
+###Avec SFML
+* make runtestsfml
 
