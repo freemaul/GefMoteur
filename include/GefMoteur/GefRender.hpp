@@ -9,9 +9,6 @@ namespace GefMoteur
 {
 namespace GefRender
 {
-	class Dessinable;
-	class RenderTarget;
-
 	class Dessinable
 	{
 	protected:
