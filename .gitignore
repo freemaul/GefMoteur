@@ -3,3 +3,4 @@ lib/*
 */*/*.o
 test/*/test
 codeblock/GefMoteur/obj
+codeblock/GefMoteur/*.a

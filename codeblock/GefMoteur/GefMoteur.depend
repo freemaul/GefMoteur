@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1284324535 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefmoteur.cpp
+	<GefMoteur/GefMoteur.hpp>
+
+1284324535 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefmoteur.hpp
+	<GefMoteur/GefRender.hpp>
+
+1284324535 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefrender.hpp
+	<vector>
+	<GefMoteur/GefSystem.hpp>
+	<string>
+
+1284324535 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefsystem.hpp
+
+1284324535 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefrender.cpp
+	<GefMoteur/GefRender.hpp>
+
+1284324535 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefrendersfml.cpp
+	<GefMoteur/GefRenderSfml.hpp>
+
+1284324535 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefrendersfml.hpp
+	<GefMoteur/GefRender.hpp>
+	<SFML/Graphics.hpp>
+
+1284324535 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefsystemsfml.cpp
+	<GefMoteur/GefSystemSfml.hpp>
+
+1284324535 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefsystemsfml.hpp
+	<GefMoteur/GefSystem.hpp>
+	<SFML/System.hpp>
+	<SFML/Graphics.hpp>
+
