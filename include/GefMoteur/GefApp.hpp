@@ -7,7 +7,7 @@ namespace GefMoteur
 {
 	namespace GefApp
 	{
-		App
+		class App
 		{
 		protected:
 			GefRender::Scene_directeur &scdir;
