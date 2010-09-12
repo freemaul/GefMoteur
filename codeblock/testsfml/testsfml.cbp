@@ -18,10 +18,11 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add option="-lsfml-system" />
-					<Add option="-lsfml-window" />
+					<Add option="-lGefMoteur" />
 					<Add option="-lsfml-graphics" />
-					<Add library="..\GefMoteur\libGefMoteur.a" />
+					<Add option="-lsfml-window" />
+					<Add option="-lsfml-system" />
+					<Add directory="..\GefMoteur" />
 				</Linker>
 			</Target>
 		</Build>
