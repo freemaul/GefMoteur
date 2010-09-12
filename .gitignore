@@ -2,3 +2,4 @@ lib/*
 */*.o
 */*/*.o
 test/*/test
+codeblock/GefMoteur/obj
