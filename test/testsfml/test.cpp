@@ -25,10 +25,11 @@ int main(int argc,char *argv[])
 
 	GefMoteur::GefSystemSfml::HorlogeSfml horloge;
 	GefMoteur::GefRender::Scene_directeur scdir(horloge);
+	GefMoteur::GefRender::Couche couche1;
 
 	GefMoteur::GefSystemSfml::Entree::SourieSfml sourie(App);
 
-	scdir << monsp << animation1;
+	scdir << (couche1 << monsp << animation1);
 
 	bool Running = true;
 	while (Running)
