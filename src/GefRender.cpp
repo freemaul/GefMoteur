@@ -96,7 +96,6 @@ const Sprite& Animable::Donne_Sprite() const
 }
 
 
-//Couche::Couche(GefSystem::Horloge& h)// : horloge(h)
 Couche::Couche()
 {
 
@@ -124,8 +123,6 @@ Couche& Couche::operator << (Animable& a)
 void Couche::Maj(float temps)
 {
 	std::vector<Animable*>::size_type sz = animables.size();
-//	float temps = horloge.Temps();
-//	horloge.Zero();
 
 	unsigned int i;
 	for(i=0;i<sz;i++)

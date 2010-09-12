@@ -66,9 +66,7 @@ namespace GefRender
 	protected:
 		std::vector<const Dessinable*> dessinables;
 		std::vector<Animable*> animables;
-//		GefSystem::Horloge& horloge;
 	public:
-//		Couche(GefSystem::Horloge&);
 		Couche();
 
 		Couche& operator << (const Dessinable&);
