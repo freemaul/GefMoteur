@@ -61,24 +61,24 @@ namespace GefRender
 		const Sprite& Donne_Sprite() const;
 	};
 
-	class Scene_directeur
+	class Couche
 	{
 	protected:
 		std::vector<const Dessinable*> dessinables;
 		std::vector<Animable*> animables;
-		GefSystem::Horloge& horloge;
+//		GefSystem::Horloge& horloge;
 	public:
-		Scene_directeur(GefSystem::Horloge&);
+		Couche(GefSystem::Horloge&);
 
-		Scene_directeur& operator << (const Dessinable&);
-		Scene_directeur& operator << (const Sprite&);
-		Scene_directeur& operator << (Animable&);
+		Couche& operator << (const Dessinable&);
+		Couche& operator << (const Sprite&);
+		Couche& operator << (Animable&);
 
-		Scene_directeur& operator >> (const Dessinable&);
-		Scene_directeur& operator >> (const Sprite&);
-		Scene_directeur& operator >> (Animable&);
+		Couche& operator >> (const Dessinable&);
+		Couche& operator >> (const Sprite&);
+		Couche& operator >> (Animable&);
 
-		void Maj();
+		void Maj(float);
 		void Dessine();
 	};
 

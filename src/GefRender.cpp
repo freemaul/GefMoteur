@@ -96,42 +96,42 @@ const Sprite& Animable::Donne_Sprite() const
 }
 
 
-Scene_directeur::Scene_directeur(GefSystem::Horloge& h) : horloge(h)
+Couche::Couche(GefSystem::Horloge& h)// : horloge(h)
 {
 
 }
 
-Scene_directeur& Scene_directeur::operator << (const Dessinable& d)
+Couche& Couche::operator << (const Dessinable& d)
 {
 	dessinables.push_back(&d);
 	return *this;
 }
 
-Scene_directeur& Scene_directeur::operator << (const Sprite& s)
+Couche& Couche::operator << (const Sprite& s)
 {
 	*this << s.Donne_Dessinable();
 	return *this;
 }
 
-Scene_directeur& Scene_directeur::operator << (Animable& a)
+Couche& Couche::operator << (Animable& a)
 {
 	animables.push_back(&a);
 	*this << a.Donne_Sprite();
 	return *this;
 }
 
-void Scene_directeur::Maj()
+void Couche::Maj(float temps)
 {
 	std::vector<Animable*>::size_type sz = animables.size();
-	float temps = horloge.Temps();
-	horloge.Zero();
+//	float temps = horloge.Temps();
+//	horloge.Zero();
 
 	unsigned int i;
 	for(i=0;i<sz;i++)
 		animables[i]->Maj(temps);
 }
 
-void Scene_directeur::Dessine()
+void Couche::Dessine()
 {
 	std::vector<Dessinable*>::size_type sz = dessinables.size();
 	unsigned int i;
