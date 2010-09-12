@@ -171,3 +171,4 @@ void Scene_directeur::Dessine()
 	for(i=0;i<sz;i++)
 		couches[i]->Dessine();
 }
+
