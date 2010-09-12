@@ -96,7 +96,8 @@ const Sprite& Animable::Donne_Sprite() const
 }
 
 
-Couche::Couche(GefSystem::Horloge& h)// : horloge(h)
+//Couche::Couche(GefSystem::Horloge& h)// : horloge(h)
+Couche::Couche()
 {
 
 }
