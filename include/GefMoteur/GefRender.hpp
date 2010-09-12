@@ -68,7 +68,8 @@ namespace GefRender
 		std::vector<Animable*> animables;
 //		GefSystem::Horloge& horloge;
 	public:
-		Couche(GefSystem::Horloge&);
+//		Couche(GefSystem::Horloge&);
+		Couche();
 
 		Couche& operator << (const Dessinable&);
 		Couche& operator << (const Sprite&);
