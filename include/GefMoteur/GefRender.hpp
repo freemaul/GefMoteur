@@ -83,6 +83,21 @@ namespace GefRender
 		void Dessine();
 	};
 
+	class Scene_directeur
+	{
+	protected:
+		std::vector<Couche*> couches;
+		GefSystem::Horloge& horloge;
+	public:
+		Scene_directeur(GefSystem::Horloge&);
+
+		Scene_directeur& operator << (Couche&);
+
+		Scene_directeur& operator >> (Couche&);
+
+		void Maj();
+		void Dessine();
+	};
 
 }; // GefRender
 }; // GefMoteur

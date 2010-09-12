@@ -140,3 +140,34 @@ void Couche::Dessine()
 		dessinables[i]->Dessine();
 }
 
+
+
+Scene_directeur::Scene_directeur(GefSystem::Horloge& h) : horloge(h)
+{
+
+}
+
+Scene_directeur& Scene_directeur::operator << (Couche& c)
+{
+	couches.push_back(&c);
+	return *this;
+}
+
+void Scene_directeur::Maj()
+{
+	std::vector<Couche*>::size_type sz = couches.size();
+	float temps = horloge.Temps();
+	horloge.Zero();
+
+	unsigned int i;
+	for(i=0;i<sz;i++)
+		couches[i]->Maj(temps);
+}
+
+void Scene_directeur::Dessine()
+{
+	std::vector<Couche*>::size_type sz = couches.size();
+	unsigned int i;
+	for(i=0;i<sz;i++)
+		couches[i]->Dessine();
+}
