@@ -4,5 +4,7 @@ lib/*
 test/*/test
 codeblock/GefMoteur/obj
 codeblock/GefMoteur/*.a
+codeblock/GefMoteur/*.layout
 codeblock/testsfml/bin
 codeblock/testsfml/obj
+codeblock/testsfml/*.layout
