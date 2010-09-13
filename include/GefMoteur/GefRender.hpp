@@ -97,6 +97,18 @@ namespace GefRender
 		void Dessine();
 	};
 
+	class Ressources_directeur
+	{
+	public:
+		virtual void* Charge_image(const char*)=0;
+		virtual Sprite& Donne_sprite()=0;
+		virtual Animable& Donne_animable()=0;
+
+		virtual void Suppr_image(void*)=0;
+		virtual void Suppr_sprite(Sprite&);
+		virtual void Suppr_animable(Animable&);
+	};
+
 }; // GefRender
 }; // GefMoteur
 
