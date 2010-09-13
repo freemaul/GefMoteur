@@ -17,8 +17,9 @@ namespace GefMoteur
 	{
 	protected:
 		GefRender::Scene_directeur& scdir;
+		GefRender::Ressources_directeur& ressdir;
 	public:
-		Moteur(GefRender::Scene_directeur&);
+		Moteur(GefRender::Scene_directeur&,GefRender::Ressources_directeur&);
 		virtual void Maj();
 		virtual void Dessine();
 	};

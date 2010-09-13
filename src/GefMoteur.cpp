@@ -4,7 +4,7 @@ using namespace GefMoteur::GefRender;
 
 const char GefMoteur::Version[]="0.B";
 
-Moteur::Moteur(Scene_directeur& scdir) : scdir(scdir)
+Moteur::Moteur(Scene_directeur& scdir,Ressources_directeur& ressdir) : scdir(scdir) , ressdir(ressdir)
 {
 
 }
