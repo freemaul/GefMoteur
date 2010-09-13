@@ -105,8 +105,8 @@ namespace GefRender
 		virtual Animable& Donne_animable()=0;
 
 		virtual void Suppr_image(void*)=0;
-		virtual void Suppr_sprite(Sprite&);
-		virtual void Suppr_animable(Animable&);
+		virtual void Suppr_sprite(Sprite&)=0;
+		virtual void Suppr_animable(Animable&)=0;
 	};
 
 }; // GefRender
