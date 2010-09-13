@@ -42,6 +42,22 @@ namespace GefRenderSfml
 		virtual void Definit_Image(const std::string& fichier_image);
 	};
 
+	class Ressources_directeurSfml : GefRender::Ressources_directeur
+	{
+	protected:
+		sf::RenderTarget& rt;
+	public:
+		Ressources_directeurSfml(sf::RenderTarget&);
+
+		virtual void* Charge_image(const char*);
+		virtual GefRender::Sprite& Donne_sprite();
+		virtual GefRender::Animable& Donne_animable();
+
+		virtual void Suppr_image(void*);
+		virtual void Suppr_sprite(GefRender::Sprite&);
+		virtual void Suppr_animable(GefRender::Animable&);
+	};
+
 }; // GefRender
 }; // GefMoteur
 
