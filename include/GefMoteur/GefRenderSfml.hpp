@@ -42,7 +42,7 @@ namespace GefRenderSfml
 		virtual void Definit_Image(const std::string& fichier_image);
 	};
 
-	class Ressources_directeurSfml : GefRender::Ressources_directeur
+	class Ressources_directeurSfml : public GefRender::Ressources_directeur
 	{
 	protected:
 		sf::RenderTarget& rt;
