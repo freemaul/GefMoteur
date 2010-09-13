@@ -1,4 +1,5 @@
 #include <GefMoteur/GefRenderSfml.hpp>
+using namespace GefMoteur;
 using namespace GefMoteur::GefRenderSfml;
 using namespace GefMoteur::GefRender;
 
@@ -74,5 +75,48 @@ void AnimableSfml::Definit_Image(const std::string& fichier_image)
 		((sf::Image*)image)->LoadFromFile(fichier_image);
 	}
 	
+}
+
+
+Ressources_directeurSfml::Ressources_directeurSfml(sf::RenderTarget& rt) : rt(rt)
+{
+
+}
+
+void* Ressources_directeurSfml::Charge_image(const char* file)
+{
+	sf::Image* img = new sf::Image();
+	img->LoadFromFile(file);
+	return img;
+}
+
+GefRender::Sprite& Ressources_directeurSfml::Donne_sprite()
+{
+	SpriteSfml* sp = new SpriteSfml(rt);
+	return *sp;
+}
+
+GefRender::Animable& Ressources_directeurSfml::Donne_animable()
+{
+	AnimableSfml* anim = new AnimableSfml(rt);
+	return *anim;
+}
+
+void Ressources_directeurSfml::Suppr_image(void* img)
+{
+	sf::Image* imgsfml = (sf::Image*)img;
+	delete imgsfml;
+}
+
+void Ressources_directeurSfml::Suppr_sprite(GefRender::Sprite& sp)
+{
+	SpriteSfml* spsfml = (SpriteSfml*)&sp;
+	delete spsfml;
+}
+
+void Ressources_directeurSfml::Suppr_animable(GefRender::Animable& anim)
+{
+	AnimableSfml* animsfml = (AnimableSfml*)&anim;
+	delete animsfml;
 }
 
