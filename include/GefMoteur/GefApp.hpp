@@ -16,6 +16,7 @@ namespace GefMoteur
 			GefMoteur::Moteur &moteur;
 		public:
 			App(GefRender::Scene_directeur&,GefRender::Ressources_directeur&,GefMoteur::Moteur&);
+			virtual void Boucle()=0;
 		};
 	};
 };
