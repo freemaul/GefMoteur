@@ -12,9 +12,10 @@ namespace GefMoteur
 		{
 		protected:
 			GefRender::Scene_directeur &scdir;
+			GefRender::Ressources_directeur &ressdir;
 			GefMoteur::Moteur &moteur;
 		public:
-			App(GefRender::Scene_directeur&,GefMoteur::Moteur&);
+			App(GefRender::Scene_directeur&,GefRender::Ressources_directeur&,GefMoteur::Moteur&);
 		};
 	};
 };
