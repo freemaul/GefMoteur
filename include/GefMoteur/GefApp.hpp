@@ -3,6 +3,7 @@
 
 #include <GefMoteur/GefRender.hpp>
 #include <GefMoteur/GefMoteur.hpp>
+#include <string>
 
 namespace GefMoteur
 {
@@ -16,6 +17,7 @@ namespace GefMoteur
 			GefMoteur::Moteur &moteur;
 		public:
 			App(GefRender::Scene_directeur&,GefRender::Ressources_directeur&,GefMoteur::Moteur&);
+			virtual void Configure(int,int,int,std::string)=0;
 			virtual void Boucle()=0;
 		};
 	};
