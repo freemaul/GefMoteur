@@ -4,18 +4,24 @@ using namespace GefMoteur::GefRender;
 
 const char GefMoteur::Version[]="0.B";
 
-Moteur::Moteur(Scene_directeur& scdir,Ressources_directeur& ressdir) : scdir(scdir) , ressdir(ressdir)
+Moteur::Moteur() : scdir(NULL) , ressdir(NULL)
 {
 
+}
+
+void Moteur::Configure(Scene_directeur& scdir,Ressources_directeur& ressdir)
+{
+	this->scdir = &scdir;
+	this->ressdir = &ressdir;
 }
 
 void Moteur::Maj()
 {
-	scdir.Maj();
+	scdir->Maj();
 }
 
 void Moteur::Dessine()
 {
-	scdir.Dessine();
+	scdir->Dessine();
 }
 
