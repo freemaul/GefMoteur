@@ -1,4 +1,5 @@
 #include <GefMoteur/GefAppSfml.hpp>
+#include <string>
 using namespace GefMoteur;
 using namespace GefMoteur::GefApp;
 using namespace GefMoteur::GefAppSfml;
@@ -6,6 +7,11 @@ using namespace GefMoteur::GefAppSfml;
 AppSfml::AppSfml(Moteur& moteur) : App(scdir_sfml,ressdir_sfml,moteur) , scdir_sfml(horloge) , ressdir_sfml(render_target)
 {
 
+}
+
+void AppSfml::Configure(int tx,int ty,int depth,std::string titre)
+{
+	render_target.Create(sf::VideoMode(tx, ty, depth), titre);
 }
 
 void AppSfml::Boucle()

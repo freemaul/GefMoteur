@@ -18,6 +18,7 @@ namespace GefMoteur
 			GefRenderSfml::Ressources_directeurSfml ressdir_sfml;
 		public:
 			AppSfml(GefMoteur::Moteur&);
+			virtual void Configure(int tx=800,int ty=600,int depth=32,std::string titre="AppSfml");
 			virtual void Boucle();
 		};
 	};
