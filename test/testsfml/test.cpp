@@ -1,6 +1,7 @@
 #include <GefMoteur/GefMoteur.hpp>
 #include <GefMoteur/GefRenderSfml.hpp>
 #include <GefMoteur/GefSystemSfml.hpp>
+#include <GefMoteur/GefAppSfml.hpp>
 #include <cstdlib>
 #include <iostream>
 
@@ -11,7 +12,12 @@ int main(int argc,char *argv[])
 	std::cout << "Helloworld" << std::endl;
 	std::cout << "Version " << GefMoteur::Version << std::endl;
 
-	sf::RenderWindow App(sf::VideoMode(800, 600, 32), "SFML Window");
+	GefMoteur::Moteur MonMoteur;
+	GefMoteur::GefAppSfml::AppSfml MonApp(MonMoteur);
+
+	MonApp.Configure();
+	MonApp.Boucle();
+/*	sf::RenderWindow App(sf::VideoMode(800, 600, 32), "SFML Window");
 
 	sf::Image image,image2;
 	GefMoteur::GefRenderSfml::SpriteSfml monsp(App);
@@ -53,7 +59,7 @@ int main(int argc,char *argv[])
 		App.Display();
 		App.Clear();
 	}
-
+*/
 
 	return 0;
 }
