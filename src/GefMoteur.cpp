@@ -2,7 +2,7 @@
 using namespace GefMoteur;
 using namespace GefMoteur::GefRender;
 
-const char GefMoteur::Version[]="0.B";
+const char GefMoteur::Version[]="0.B.3";
 
 Moteur::Moteur() : scdir(NULL) , ressdir(NULL)
 {
