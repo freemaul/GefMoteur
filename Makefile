@@ -3,10 +3,10 @@ export CFLAGS=-Wall
 export INST_PATH=$(PWD)/lib
 export INC_PATH=-I $(PWD)/include
 
-all:
+lib/libGefMoteur.a:
 	@(cd src && $(MAKE))
 
-install: all
+install: lib/libGefMoteur.a
 	@(cp lib/*.a /usr/lib/)
 	@(cp -R include/* /usr/include/)
 
@@ -14,13 +14,13 @@ uninstall:
 	@(rm -f /usr/lib/libGefMoteur.a)
 	@(rm -f -R /usr/include/GefMoteur)
 
-testsfml:all
+testsfml:lib/libGefMoteur.a
 	@(cd test/testsfml && $(MAKE))
 
 runtestsfml: testsfml
 	@(cd test/testsfml && ./test)
 
-testsystem:all
+testsystem:lib/libGefMoteur.a
 	@(cd test/testsystem && $(MAKE))
 
 runtestsystem:testsystem
