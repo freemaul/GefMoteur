@@ -12,8 +12,10 @@ Bibliothèque C++ pour création de jeux 2D
 * sudo make install
 
 ##Tests
-###Test du system GefMoteur
+###Linux
+####Test du system GefMoteur
 * make runtestsystem
-###Avec SFML
+####Avec SFML
 * make runtestsfml
-
+###Windows
+Ouvrir le workspace dans le dossier codeblock avec le logiciel codeblock puis faire un build
