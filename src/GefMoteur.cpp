@@ -25,3 +25,8 @@ void Moteur::Dessine()
 	scdir->Dessine();
 }
 
+void Moteur::Lance()
+{
+
+}
+

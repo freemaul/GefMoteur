@@ -23,6 +23,7 @@ namespace GefMoteur
 		void Configure(GefRender::Scene_directeur&,GefRender::Ressources_directeur&);
 		virtual void Maj();
 		virtual void Dessine();
+		virtual void Lance();
 	};
 };
 #endif
