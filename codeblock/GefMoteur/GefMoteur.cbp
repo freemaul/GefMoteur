@@ -33,12 +33,14 @@
 					<Add option="-O2" />
 					<Add option="-Wall" />
 					<Add option="-g" />
+					<Add option="-DDEBUG" />
 					<Add directory="..\..\include" />
 				</Compiler>
 			</Target>
 		</Build>
 		<Unit filename="..\..\include\GefMoteur\GefApp.hpp" />
 		<Unit filename="..\..\include\GefMoteur\GefAppSfml.hpp" />
+		<Unit filename="..\..\include\GefMoteur\GefDebug.hpp" />
 		<Unit filename="..\..\include\GefMoteur\GefMoteur.hpp" />
 		<Unit filename="..\..\include\GefMoteur\GefMoteurH.hpp" />
 		<Unit filename="..\..\include\GefMoteur\GefRender.hpp" />
@@ -47,6 +49,7 @@
 		<Unit filename="..\..\include\GefMoteur\GefSystemSfml.hpp" />
 		<Unit filename="..\..\src\GefApp.cpp" />
 		<Unit filename="..\..\src\GefAppSfml.cpp" />
+		<Unit filename="..\..\src\GefDebug.cpp" />
 		<Unit filename="..\..\src\GefMoteur.cpp" />
 		<Unit filename="..\..\src\GefMoteurH.cpp" />
 		<Unit filename="..\..\src\GefRender.cpp" />

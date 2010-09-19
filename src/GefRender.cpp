@@ -1,4 +1,5 @@
 #include <GefMoteur/GefRender.hpp>
+#include <GefMoteur/GefDebug.hpp>
 using namespace GefMoteur::GefRender;
 
 

@@ -1,4 +1,5 @@
 #include <GefMoteur/GefMoteurH.hpp>
+#include <GefMoteur/GefDebug.hpp>
 using namespace GefMoteur;
 using namespace GefMoteur::MoteurHClasses;
 #include <iostream>

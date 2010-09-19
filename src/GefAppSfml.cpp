@@ -1,4 +1,5 @@
 #include <GefMoteur/GefAppSfml.hpp>
+#include <GefMoteur/GefDebug.hpp>
 #include <string>
 using namespace GefMoteur;
 using namespace GefMoteur::GefApp;
