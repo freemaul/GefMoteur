@@ -3,7 +3,7 @@ using namespace GefMoteur;
 using namespace GefMoteur::MoteurHClasses;
 #include <iostream>
 
-MoteurH::MoteurH()
+MoteurH::MoteurH() : Moteur()
 {
 	etat = 0;
 }
