@@ -6,5 +6,6 @@ using namespace GefMoteur::GefRender;
 App::App(Scene_directeur& scdir,GefRender::Ressources_directeur& ressdir,Moteur& moteur) : scdir(scdir) , ressdir(ressdir) , moteur(moteur)
 {
 	moteur.Configure(scdir,ressdir);
+	moteur.Lance();
 }
 
