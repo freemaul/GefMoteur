@@ -37,6 +37,7 @@ namespace GefMoteur
 		friend class MoteurHClasses::Menu;
 	public:
 		MoteurH();
+		virtual ~MoteurH();
 		virtual void Lance();
 	};
 };

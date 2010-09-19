@@ -22,6 +22,11 @@ SpriteSfml::SpriteSfml(sf::RenderTarget& rtsfml) : Sprite(dessinablesfml), dessi
 
 }
 
+SpriteSfml::~SpriteSfml()
+{
+
+}
+
 void SpriteSfml::En_Change_Position(int posx,int posy)
 {
 	sprite.SetPosition(posx,posy);
@@ -74,7 +79,7 @@ void AnimableSfml::Definit_Image(const std::string& fichier_image)
 		image = new sf::Image();
 		((sf::Image*)image)->LoadFromFile(fichier_image);
 	}
-	
+
 }
 
 

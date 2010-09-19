@@ -16,7 +16,7 @@ namespace GefRenderSfml
 		virtual void En_Dessine() const;
 	public:
 		DessinableSfml(sf::Drawable&,sf::RenderTarget&);
-		
+
 	};
 
 	class SpriteSfml : public GefRender::Sprite
@@ -26,6 +26,7 @@ namespace GefRenderSfml
 		DessinableSfml dessinablesfml;
 		virtual void En_Change_Position(int,int);
 	public:
+        virtual ~SpriteSfml();
 		SpriteSfml(sf::RenderTarget&);
 		virtual void Definit_Rectangle(int px1,int py1,int px2,int py2);
 		virtual void Definit_Image(void* image);
@@ -37,7 +38,7 @@ namespace GefRenderSfml
 		SpriteSfml spritesfml;
 	public:
 		AnimableSfml(sf::RenderTarget&);
-		~AnimableSfml();
+		virtual ~AnimableSfml();
 		virtual void Definit_Image(void* image);
 		virtual void Definit_Image(const std::string& fichier_image);
 	};

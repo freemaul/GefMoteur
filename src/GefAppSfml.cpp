@@ -9,6 +9,11 @@ AppSfml::AppSfml(Moteur& moteur) : App(scdir_sfml,ressdir_sfml,moteur) , scdir_s
     moteur.Lance();
 }
 
+AppSfml::~AppSfml()
+{
+
+}
+
 void AppSfml::Configure(int tx,int ty,int depth,std::string titre)
 {
 	render_target.Create(sf::VideoMode(tx, ty, depth), titre);

@@ -8,6 +8,11 @@ MoteurH::MoteurH() : Moteur()
 	etat = 0;
 }
 
+MoteurH::~MoteurH()
+{
+
+}
+
 void MoteurH::Lance()
 {
 	mon_menu = new Menu(*this);
