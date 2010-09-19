@@ -35,9 +35,6 @@
 					<Add option="-g" />
 					<Add directory="..\..\include" />
 				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
 			</Target>
 		</Build>
 		<Unit filename="..\..\include\GefMoteur\GefApp.hpp" />
