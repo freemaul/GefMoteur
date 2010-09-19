@@ -24,13 +24,17 @@
 			</Target>
 		</Build>
 		<Unit filename="..\..\include\GefMoteur\GefApp.hpp" />
+		<Unit filename="..\..\include\GefMoteur\GefAppSfml.hpp" />
 		<Unit filename="..\..\include\GefMoteur\GefMoteur.hpp" />
+		<Unit filename="..\..\include\GefMoteur\GefMoteurH.hpp" />
 		<Unit filename="..\..\include\GefMoteur\GefRender.hpp" />
 		<Unit filename="..\..\include\GefMoteur\GefRenderSfml.hpp" />
 		<Unit filename="..\..\include\GefMoteur\GefSystem.hpp" />
 		<Unit filename="..\..\include\GefMoteur\GefSystemSfml.hpp" />
 		<Unit filename="..\..\src\GefApp.cpp" />
+		<Unit filename="..\..\src\GefAppSfml.cpp" />
 		<Unit filename="..\..\src\GefMoteur.cpp" />
+		<Unit filename="..\..\src\GefMoteurH.cpp" />
 		<Unit filename="..\..\src\GefRender.cpp" />
 		<Unit filename="..\..\src\GefRenderSfml.cpp" />
 		<Unit filename="..\..\src\GefSystemSfml.cpp" />
