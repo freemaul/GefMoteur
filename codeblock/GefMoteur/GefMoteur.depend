@@ -38,3 +38,19 @@
 	<GefMoteur/GefMoteur.hpp>
 	<string>
 
+1284914090 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefappsfml.cpp
+	<GefMoteur/GefAppSfml.hpp>
+	<string>
+
+1284914090 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefappsfml.hpp
+	<GefMoteur/GefApp.hpp>
+	<GefMoteur/GefRenderSfml.hpp>
+	<GefMoteur/GefSystemSfml.hpp>
+
+1284914090 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefmoteurh.cpp
+	<GefMoteur/GefMoteurH.hpp>
+	<iostream>
+
+1284914090 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefmoteurh.hpp
+	<GefMoteur/GefMoteur.hpp>
+
