@@ -17,7 +17,7 @@
 	<GefMoteur/GefRender.hpp>
 	<GefMoteur/GefDebug.hpp>
 
-1284918763 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefrendersfml.cpp
+1284924094 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefrendersfml.cpp
 	<GefMoteur/GefRenderSfml.hpp>
 	<GefMoteur/GefDebug.hpp>
 
@@ -53,7 +53,7 @@
 	<GefMoteur/GefRenderSfml.hpp>
 	<GefMoteur/GefSystemSfml.hpp>
 
-1284918756 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefmoteurh.cpp
+1285019012 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefmoteurh.cpp
 	<GefMoteur/GefMoteurH.hpp>
 	<GefMoteur/GefDebug.hpp>
 	<iostream>
@@ -61,6 +61,11 @@
 1284917663 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefmoteurh.hpp
 	<GefMoteur/GefMoteur.hpp>
 
-1284919327 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefdebug.hpp
+1285020130 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefdebug.hpp
 	<cstdlib>
+	<fstream>
+	<iostream>
+
+1285019486 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefdebug.cpp
+	<GefMoteur/GefDebug.hpp>
 

@@ -21,6 +21,7 @@ namespace GefMoteur
 			bool affiche;
 			void* image_fond;
 			GefRender::Sprite* sprite_fond;
+			MoteurH& moteurh;
 		public:
 			Menu(MoteurH&);
 			~Menu();

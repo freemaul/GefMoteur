@@ -20,9 +20,9 @@ void MoteurH::Lance()
 	*scdir << couche_menu;
 }
 
-Menu::Menu(MoteurH& moteur)
+Menu::Menu(MoteurH& moteur) : moteurh(moteur)
 {
-	image_fond = moteur.ressdir->Charge_image("fond.jpg");
+	image_fond = moteurh.ressdir->Charge_image("fond.jpg");
 	if(image_fond == NULL)
 		return;
 	sprite_fond = &(moteur.ressdir->Donne_sprite());
@@ -32,6 +32,6 @@ Menu::Menu(MoteurH& moteur)
 
 Menu::~Menu()
 {
-
+    moteurh.ressdir->Suppr_image(image_fond);
 }
 
