@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1284914090 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefmoteur.cpp
+1284918753 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefmoteur.cpp
 	<GefMoteur/GefMoteur.hpp>
+	<GefMoteur/GefDebug.hpp>
 
-1284914090 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefmoteur.hpp
+1284918547 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefmoteur.hpp
 	<GefMoteur/GefRender.hpp>
 
 1284914090 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefrender.hpp
@@ -12,45 +13,54 @@
 
 1284324535 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefsystem.hpp
 
-1284324535 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefrender.cpp
+1284918759 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefrender.cpp
 	<GefMoteur/GefRender.hpp>
+	<GefMoteur/GefDebug.hpp>
 
-1284914090 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefrendersfml.cpp
+1284918763 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefrendersfml.cpp
 	<GefMoteur/GefRenderSfml.hpp>
+	<GefMoteur/GefDebug.hpp>
 
-1284914090 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefrendersfml.hpp
+1284917616 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefrendersfml.hpp
 	<GefMoteur/GefRender.hpp>
 	<SFML/Graphics.hpp>
 
-1284324535 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefsystemsfml.cpp
+1284918766 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefsystemsfml.cpp
 	<GefMoteur/GefSystemSfml.hpp>
+	<GefMoteur/GefDebug.hpp>
 
 1284324535 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefsystemsfml.hpp
 	<GefMoteur/GefSystem.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 
-1284914090 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefapp.cpp
+1284918747 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefapp.cpp
 	<GefMoteur/GefApp.hpp>
+	<GefMoteur/GefDebug.hpp>
 
 1284914090 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefapp.hpp
 	<GefMoteur/GefRender.hpp>
 	<GefMoteur/GefMoteur.hpp>
 	<string>
 
-1284914090 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefappsfml.cpp
+1284918751 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefappsfml.cpp
 	<GefMoteur/GefAppSfml.hpp>
+	<GefMoteur/GefDebug.hpp>
 	<string>
 
-1284914090 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefappsfml.hpp
+1284917632 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefappsfml.hpp
 	<GefMoteur/GefApp.hpp>
 	<GefMoteur/GefRenderSfml.hpp>
 	<GefMoteur/GefSystemSfml.hpp>
 
-1284914090 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefmoteurh.cpp
+1284918756 source:c:\msysgit\prog\gefmoteur\gefmoteur\src\gefmoteurh.cpp
 	<GefMoteur/GefMoteurH.hpp>
+	<GefMoteur/GefDebug.hpp>
 	<iostream>
 
-1284914090 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefmoteurh.hpp
+1284917663 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefmoteurh.hpp
 	<GefMoteur/GefMoteur.hpp>
+
+1284919327 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefdebug.hpp
+	<cstdlib>
 

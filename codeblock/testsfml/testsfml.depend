@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1284916360 source:c:\msysgit\prog\gefmoteur\gefmoteur\test\testsfml\test.cpp
+1284919780 source:c:\msysgit\prog\gefmoteur\gefmoteur\test\testsfml\test.cpp
 	<GefMoteur/GefMoteurH.hpp>
 	<GefMoteur/GefAppSfml.hpp>
+	<GefMoteur/GefDebug.hpp>
 	<cstdlib>
 	<iostream>
 
-1284914090 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefmoteur.hpp
+1284918547 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefmoteur.hpp
 	<GefMoteur/GefRender.hpp>
 
 1284914090 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefrender.hpp
@@ -36,4 +37,9 @@
 	<GefMoteur/GefRender.hpp>
 	<GefMoteur/GefMoteur.hpp>
 	<string>
+
+1284920070 c:\msysgit\prog\gefmoteur\gefmoteur\include\gefmoteur\gefdebug.hpp
+	<cstdlib>
+	<fstream>
+	<iostream>
 

@@ -34,6 +34,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-g" />
+					<Add option="-DDEBUG" />
 					<Add directory="..\..\include" />
 				</Compiler>
 				<Linker>
