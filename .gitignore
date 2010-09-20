@@ -8,3 +8,4 @@ codeblock/GefMoteur/*.layout
 codeblock/testsfml/bin
 codeblock/testsfml/obj
 codeblock/testsfml/*.layout
+test/testsfml/log*.txt
