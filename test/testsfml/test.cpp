@@ -19,7 +19,10 @@ int main(int argc,char *argv[])
     delete MonApp;
     delete MonMoteur;
 
+#ifdef DEBUG
     std::cout << "Nb alloc : " << nb_new << std::endl;
+#endif //DEBUG
+
 	return 0;
 }
 

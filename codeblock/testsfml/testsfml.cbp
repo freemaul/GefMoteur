@@ -15,14 +15,24 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="..\..\include" />
+					<Add directory="..\..\SFML\include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
 					<Add option="-lGefMoteur" />
-					<Add option="-lsfml-graphics" />
-					<Add option="-lsfml-window" />
-					<Add option="-lsfml-system" />
+					<Add option="-lsfml-graphics-s" />
+					<Add option="-lsfml-window-s" />
+					<Add option="-lsfml-system-s" />
+					<Add option="-lfreetype" />
+					<Add option="-lsndfile" />
+					<Add option="-lopenal32" />
+					<Add option="-lopengl32" />
+					<Add option="-lgdi32" />
+					<Add option="-lwinmm" />
 					<Add directory="..\GefMoteur" />
+					<Add directory="..\..\SFML\lib\mingw" />
+					<Add directory="..\..\SFML\extlibs\libs-mingw" />
+					<Add directory="..\..\SFML\build\codeblocks\batch-build" />
 				</Linker>
 			</Target>
 			<Target title="Debug">
@@ -36,13 +46,23 @@
 					<Add option="-g" />
 					<Add option="-DDEBUG" />
 					<Add directory="..\..\include" />
+					<Add directory="..\..\SFML\include" />
 				</Compiler>
 				<Linker>
 					<Add option="-lGefMoteur-d" />
-					<Add option="-lsfml-graphics" />
-					<Add option="-lsfml-window" />
-					<Add option="-lsfml-system" />
+					<Add option="-lsfml-graphics-s-d" />
+					<Add option="-lsfml-window-s-d" />
+					<Add option="-lsfml-system-s-d" />
+					<Add option="-lfreetype" />
+					<Add option="-lsndfile" />
+					<Add option="-lopenal32" />
+					<Add option="-lopengl32" />
+					<Add option="-lgdi32" />
+					<Add option="-lwinmm" />
 					<Add directory="..\GefMoteur" />
+					<Add directory="..\..\SFML\build\codeblocks\batch-build" />
+					<Add directory="..\..\SFML\extlibs\libs-mingw" />
+					<Add directory="..\..\SFML\lib\mingw" />
 				</Linker>
 			</Target>
 		</Build>

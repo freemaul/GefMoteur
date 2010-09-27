@@ -17,6 +17,7 @@
 					<Add option="-O2" />
 					<Add option="-Wall" />
 					<Add directory="..\..\include" />
+					<Add directory="..\..\SFML\include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -35,6 +36,7 @@
 					<Add option="-g" />
 					<Add option="-DDEBUG" />
 					<Add directory="..\..\include" />
+					<Add directory="..\..\SFML\include" />
 				</Compiler>
 			</Target>
 		</Build>

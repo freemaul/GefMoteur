@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
 	<Workspace title="Workspace">
+		<Project filename="..\SFML\build\codeblocks\sfml-main.cbp" />
+		<Project filename="..\SFML\build\codeblocks\sfml-system.cbp" />
+		<Project filename="..\SFML\build\codeblocks\sfml-window.cbp" />
+		<Project filename="..\SFML\build\codeblocks\sfml-graphics.cbp" />
+		<Project filename="..\SFML\build\codeblocks\sfml-audio.cbp" />
+		<Project filename="..\SFML\build\codeblocks\sfml-network.cbp" />
 		<Project filename="GefMoteur\GefMoteur.cbp" />
 		<Project filename="testsfml\testsfml.cbp" active="1" />
 	</Workspace>
