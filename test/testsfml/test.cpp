@@ -6,8 +6,11 @@
 
 int main(int argc,char *argv[])
 {
+
+#ifdef DEBUG
 	std::cout << "Helloworld" << std::endl;
 	std::cout << "Version " << GefMoteur::Version << std::endl;
+#endif //DEBUG
 
 	GefMoteur::MoteurH* MonMoteur = new GefMoteur::MoteurH();
 	GefMoteur::GefAppSfml::AppSfml* MonApp = new GefMoteur::GefAppSfml::AppSfml(*MonMoteur);
