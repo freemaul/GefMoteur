@@ -14,7 +14,7 @@ uninstall:
 	@(rm -f /usr/lib/libGefMoteur.a)
 	@(rm -f -R /usr/include/GefMoteur)
 
-testsfml:lib/libGefMoteur.a
+testsfml:lib/libGefMoteur.a _SFML
 	@(cd test/testsfml && $(MAKE))
 
 runtestsfml: testsfml
