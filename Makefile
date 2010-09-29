@@ -1,8 +1,16 @@
+export USE_EXTLIBS= YES
+
 export CC=g++
 export CFLAGS=-Wall
 export INST_PATH=$(PWD)/lib
 export INC_PATH=-I $(PWD)/include -I $(PWD)/SFML/include
-export LIB_PATH=-L $(INST_PATH) -L $(PWD)/lib/SFML -L $(PWD)/extlibs
+export LIB_PATH=-L $(INST_PATH) -L $(PWD)/lib/SFML
+
+ifeq ($(USE_EXTLIBS),YES)
+	export LIB_PATH=-L $(INST_PATH) -L $(PWD)/lib/SFML -L $(PWD)/extlibs
+else
+	export LIB_PATH=-L $(INST_PATH) -L $(PWD)/lib/SFML
+endif
 
 lib/libGefMoteur.a:
 	git submodule init
