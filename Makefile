@@ -2,7 +2,7 @@ export CC=g++
 export CFLAGS=-Wall
 export INST_PATH=$(PWD)/lib
 export INC_PATH=-I $(PWD)/include -I $(PWD)/SFML/include
-export LIB_PATH=-L $(INST_PATH) -L $(PWD)/SFML/lib
+export LIB_PATH=-L $(INST_PATH) -L $(PWD)/SFML/lib -L($PWD)/extlibs
 
 lib/libGefMoteur.a: _SFML
 	@(cd src && $(MAKE))
