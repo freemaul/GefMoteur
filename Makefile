@@ -20,13 +20,13 @@ testsfml:lib/libGefMoteur.a
 runtestsfml: testsfml
 	@(cd test/testsfml && ./test)
 
-testsystem:lib/libGefMoteur.a SFML
+testsystem:lib/libGefMoteur.a _SFML
 	@(cd test/testsystem && $(MAKE))
 
 runtestsystem:testsystem
 	@(cd test/testsystem && ./test)
 
-SFML:
+_SFML:
 	@(cd SFML && $(MAKE))
 
 clean:
