@@ -4,7 +4,7 @@ export INST_PATH=$(PWD)/lib
 export INC_PATH=-I $(PWD)/include -I $(PWD)/SFML/include
 export LIB_PATH=-L $(INST_PATH) -L $(PWD)/SFML/lib
 
-lib/libGefMoteur.a:
+lib/libGefMoteur.a: _SFML
 	@(cd src && $(MAKE))
 
 install: lib/libGefMoteur.a
