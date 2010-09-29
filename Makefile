@@ -28,6 +28,8 @@ runtestsystem:testsystem
 	@(cd test/testsystem && ./test)
 
 _SFML:
+	git submodule init
+	git submodule update
 	@(cd SFML && $(MAKE))
 
 clean:
