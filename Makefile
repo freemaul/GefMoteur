@@ -1,7 +1,7 @@
 export CC=g++
 export CFLAGS=-Wall
 export INST_PATH=$(PWD)/lib
-export INC_PATH=-I $(PWD)/include
+export INC_PATH=-I $(PWD)/include -I $(PWD)/SFML/include
 
 lib/libGefMoteur.a:
 	@(cd src && $(MAKE))
