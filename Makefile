@@ -25,7 +25,13 @@ uninstall:
 	@(rm -f /usr/lib/libGefMoteur.a)
 	@(rm -f -R /usr/include/GefMoteur)
 
-testsfml:lib/libGefMoteur.a
+_SFML:
+	@(git submodule init)
+	@(git submodule update)
+	@(cd SFML && patch -p1 --dry-run -i ../SFML.patch)
+	@(cd SFML && $(MAKE))
+
+testsfml:lib/libGefMoteur.a _SFML
 	@(cd test/testsfml && $(MAKE))
 
 runtestsfml: testsfml
@@ -34,7 +40,7 @@ runtestsfml: testsfml
 testsystem:lib/libGefMoteur.a
 	@(cd test/testsystem && $(MAKE))
 
-runtestsystem:testsystem
+runtestsystem:testsystem _SFML
 	@(cd test/testsystem && ./test)
 
 clean:
