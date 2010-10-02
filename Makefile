@@ -29,8 +29,11 @@ _SFML:
 	@(git submodule init)
 	@(git submodule update)
 	@(mkdir -p ./lib/SFML/)
+	-@(echo ".gitignore" > ./SFML/.gitignore)
+	-@(echo "*.o" >> ./SFML/.gitignore)
 	-@(patch -p0 -N -i ./SFML.patch)
 	@(cd SFML && $(MAKE))
+	@(cd SFML && git checkout src/SFML/Makefile)
 
 testsfml:lib/libGefMoteur.a _SFML
 	@(cd test/testsfml && $(MAKE))
