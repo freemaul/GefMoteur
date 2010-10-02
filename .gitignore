@@ -8,5 +8,6 @@ codeblock/testsfml/bin
 codeblock/testsfml/obj
 codeblock/testsfml/*.layout
 test/testsfml/log*.txt
-SFML/
-lib/
+SFML
+lib/libGefMoteur.a
+lib/SFML/
