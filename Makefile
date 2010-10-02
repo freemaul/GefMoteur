@@ -13,8 +13,8 @@ else
 endif
 
 lib/libGefMoteur.a:
-	git submodule init
-	git submodule update
+	@(git submodule init)
+	@(git submodule update)
 	@(cd src && $(MAKE))
 
 install: lib/libGefMoteur.a
@@ -28,6 +28,7 @@ uninstall:
 _SFML:
 	@(git submodule init)
 	@(git submodule update)
+	@(mkdir -p ./lib/SFML/)
 	-@(patch -p0 -N -i ./SFML.patch)
 	@(cd SFML && $(MAKE))
 
