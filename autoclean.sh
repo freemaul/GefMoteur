@@ -26,3 +26,6 @@ rm 	test/testsfml/.deps/ -dir -f
 rm -f	test/testsfml/Makefile
 rm -f	test/testsfml/Makefile.in
 rm	m4/ -dir -f
+rm -f	autoscan.log
+rm -f	config.h.in~
+rm -f	configure.scan
