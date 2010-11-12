@@ -1,5 +1,12 @@
+lib_LIBRARIES = libGefMoteur.a
 
+libGefMoteur_a_SOURCES = GefMoteurH.cpp \
+			GefApp.cpp \
+			GefDebug.cpp \
+			GefRender.cpp \
+			GefMoteur.cpp \
+			GefRenderSfml.cpp \
+			GefSystemSfml.cpp \
+			GefAppSfml.cpp
 
-lib_LTLIBRARIES = libGefMoteur.la
-libGefMoteur_la_SOURCES = ./*.cpp
-
+AM_CPPFLAGS=-I../include

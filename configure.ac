@@ -4,31 +4,33 @@
 AC_PREREQ([2.65])
 AC_INIT([GefMoteur], [0.B.3], [fege.guillaume@gmail.com])
 #AC_CONFIG_SRCDIR([include/GefMoteur/GefApp.hpp])
+AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE
 
 # Checks for programs.
 AC_PROG_CXX
-AC_PROG_CC
 AC_PROG_LIBTOOL
 
 # Checks for libraries.
 # FIXME: Replace `main' with a function in `-lGefMoteur':
-AC_CHECK_LIB([GefMoteur], [main])
+#AC_CHECK_LIB([GefMoteur], [main])
 # FIXME: Replace `main' with a function in `-lX11':
-AC_CHECK_LIB([X11], [main])
+#AC_CHECK_LIB([X11], [main])
 # FIXME: Replace `main' with a function in `-lXrandr':
-AC_CHECK_LIB([Xrandr], [main])
+#AC_CHECK_LIB([Xrandr], [main])
 # FIXME: Replace `main' with a function in `-lfreetype':
-AC_CHECK_LIB([freetype], [main])
+#AC_CHECK_LIB([freetype], [main])
 # FIXME: Replace `main' with a function in `-lglut':
-AC_CHECK_LIB([glut], [main])
+#AC_CHECK_LIB([glut], [main])
 # FIXME: Replace `main' with a function in `-lopenal':
-AC_CHECK_LIB([openal], [main])
+#AC_CHECK_LIB([openal], [main])
 # FIXME: Replace `main' with a function in `-lsndfile':
-AC_CHECK_LIB([sndfile], [main])
+#AC_CHECK_LIB([sndfile], [main])
 
 # Checks for header files.
+AC_CHECK_HEADERS([GL/glu.h],,[echo "error, GLU not found"])
+AC_CHECK_HEADERS([SFML/Graphics.hpp],,[echo "error, SFML not found"])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_HEADER_STDBOOL

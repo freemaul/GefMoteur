@@ -25,4 +25,4 @@ rm -f	stamp-h1
 rm 	test/testsfml/.deps/ -dir -f
 rm -f	test/testsfml/Makefile
 rm -f	test/testsfml/Makefile.in
-
+rm	m4/ -dir -f
