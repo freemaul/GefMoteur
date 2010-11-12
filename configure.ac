@@ -3,10 +3,11 @@
 
 AC_PREREQ([2.65])
 AC_INIT([GefMoteur], [0.B.3], [fege.guillaume@gmail.com])
+AC_LANG(C++)
 #AC_CONFIG_SRCDIR([include/GefMoteur/GefApp.hpp])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADERS([config.h])
-AC_LANG(C++)
+#AC_CONFIG_FILES([include/GefMoteur/GefAppSfml.hpp:include/GefMoteur/GefAppSfml.hpp.in])
 AM_INIT_AUTOMAKE
 
 # Checks for programs.
@@ -57,6 +58,7 @@ AC_FUNC_MALLOC
 
 AC_CONFIG_FILES([Makefile
 	src/Makefile
+	include/GefMoteur/Makefile
 	test/testsfml/Makefile])
 
 #AC_CONFIG_FILES([Makefile
