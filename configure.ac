@@ -31,30 +31,20 @@ AC_PROG_LIBTOOL
 #AC_CHECK_LIB([sndfile], [main])
 
 # Checks for header files.
-AC_CHECK_LIB([sfml-system], [main], ,
-AC_MSG_ERROR([ *** Unable to find SFML library (http://www.sfml-dev.org/)]))
-AC_CHECK_HEADERS([SFML/System.hpp], ,
-AC_MSG_ERROR([ *** SFML library found but cannot find headers (http://www.sfml-dev.org/)]))
+AC_CHECK_LIB([sfml-system], [main])
+AC_CHECK_HEADERS([SFML/System.hpp])
 
-AC_CHECK_LIB([sfml-window], [main], ,
-AC_MSG_ERROR([ *** Unable to find SFML Window library (http://www.sfml-dev.org/)]))
-AC_CHECK_HEADERS([SFML/Window.hpp], ,
-AC_MSG_ERROR([ *** SFML Window library found but cannot find headers (http://www.sfml-dev.org/)]))
+AC_CHECK_LIB([sfml-window], [main])
+AC_CHECK_HEADERS([SFML/Window.hpp])
 
-AC_CHECK_LIB([sfml-graphics], [main], ,
-AC_MSG_ERROR([ *** Unable to find SFML Graphics library (http://www.sfml-dev.org/)]))
-AC_CHECK_HEADERS([SFML/Graphics.hpp], ,
-AC_MSG_ERROR([ *** SFML Graphics library found but cannot find headers (http://www.sfml-dev.org/)]))
+AC_CHECK_LIB([sfml-graphics], [main])
+AC_CHECK_HEADERS([SFML/Graphics.hpp])
 
-AC_CHECK_LIB([sfml-network], [main], ,
-AC_MSG_ERROR([ *** Unable to find SFML Network library (http://www.sfml-dev.org/)]))
-AC_CHECK_HEADERS([SFML/Network.hpp], ,
-AC_MSG_ERROR([ *** SFML Network library found but cannot find headers (http://www.sfml-dev.org/)]))
+AC_CHECK_LIB([sfml-network], [main])
+AC_CHECK_HEADERS([SFML/Network.hpp])
 
-AC_CHECK_LIB([sfml-audio], [main], ,
-AC_MSG_ERROR([ *** Unable to find SFML Audio library (http://www.sfml-dev.org/)]))
-AC_CHECK_HEADERS([SFML/Audio.hpp], ,
-AC_MSG_ERROR([ *** SFML Audio library found but cannot find headers (http://www.sfml-dev.org/)]))
+AC_CHECK_LIB([sfml-audio], [main])
+AC_CHECK_HEADERS([SFML/Audio.hpp])
 
 
 # Checks for typedefs, structures, and compiler characteristics.
