@@ -1,0 +1,7 @@
+#! /bin/sh
+
+libtoolize
+aclocal
+autoconf
+automake
+
