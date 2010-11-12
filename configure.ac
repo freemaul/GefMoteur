@@ -32,14 +32,16 @@ AC_PROG_LIBTOOL
 #AC_CHECK_LIB([sndfile], [main])
 
 # Checks for header files.
+#check SFML
+HAVE_SFML=1
 AC_CHECK_LIB([sfml-system], [main])
-AC_CHECK_HEADERS([SFML/System.hpp])
+AC_CHECK_HEADERS([SFML/System.hpp], ,[HAVE_SFML=0])
 
 AC_CHECK_LIB([sfml-window], [main])
-AC_CHECK_HEADERS([SFML/Window.hpp])
+AC_CHECK_HEADERS([SFML/Window.hpp], ,[HAVE_SFML=0])
 
 AC_CHECK_LIB([sfml-graphics], [main])
-AC_CHECK_HEADERS([SFML/Graphics.hpp])
+AC_CHECK_HEADERS([SFML/Graphics.hpp], ,[HAVE_SFML=0])
 
 AC_CHECK_LIB([sfml-network], [main])
 AC_CHECK_HEADERS([SFML/Network.hpp])
@@ -47,6 +49,7 @@ AC_CHECK_HEADERS([SFML/Network.hpp])
 AC_CHECK_LIB([sfml-audio], [main])
 AC_CHECK_HEADERS([SFML/Audio.hpp])
 
+AM_CONDITIONAL(HAVE_SFML,HAVE_SFML)
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_HEADER_STDBOOL

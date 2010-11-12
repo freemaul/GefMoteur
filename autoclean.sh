@@ -30,4 +30,4 @@ rm -f	autoscan.log
 rm -f	config.h.in~
 rm -f	configure.scan
 rm -f	include/GefMoteur/Makefile
-
+rm -f	include/GefMoteur/Makefile.in

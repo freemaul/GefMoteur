@@ -1,3 +1,4 @@
+CONFIG_CLEAN_FILES=
 
 all:GefAppSfml.hpp
 
@@ -8,11 +9,24 @@ GefAppSfml.hpp: GefAppSfml.hpp.in
 	      < GefAppSfml.hpp.in; \
 	} > $@-t
 	mv $@-t $@
-MOSTLYCLEANDIRS+=GefAppSfml.hpp GefAppSfml.hpp-t
+CONFIG_CLEAN_FILES+=GefAppSfml.hpp GefAppSfml.hpp-t
 
-clean:
-	@for dir in '' $(MOSTLYCLEANDIRS); do \
-	  if test -n "$$dir" && test -d $$dir; then \
-	    echo "rmdir $$dir"; rmdir $$dir; \
-	  fi; \
-	done; \
+GefRenderSfml.hpp: GefRenderSfml.hpp.in
+	rm -f $@-t $@
+	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+	  sed -e 's|@''HAVE_SFML_GRAPHICS_HPP''@|$(HAVE_SFML_GRAPHICS_HPP)|g' \
+	      < GefRenderSfml.hpp.in; \
+	} > $@-t
+	mv $@-t $@
+CONFIG_CLEAN_FILES+=GefRenderSfml.hpp GefRenderSfml.hpp-t
+
+GefSystemSfml.hpp: GefSystemSfml.hpp.in
+	rm -f $@-t $@
+	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+	  sed -e 's|@''HAVE_SFML_GRAPHICS_HPP''@|$(HAVE_SFML_GRAPHICS_HPP)|g' \
+	  sed -e 's|@''HAVE_SFML_SYSTEM_HPP''@|$(HAVE_SFML_SYSTEM_HPP)|g' \
+	      < GefSystemSfml.hpp.in; \
+	} > $@-t
+	mv $@-t $@
+CONFIG_CLEAN_FILES+=GefSystemSfml.hpp GefRenderSfml.hpp-t
+
