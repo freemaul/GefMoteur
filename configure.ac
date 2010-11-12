@@ -4,7 +4,7 @@
 AC_PREREQ([2.65])
 AC_INIT([GefMoteur], [0.B.3], [fege.guillaume@gmail.com])
 #AC_CONFIG_SRCDIR([include/GefMoteur/GefApp.hpp])
-#AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE
 
 # Checks for programs.
