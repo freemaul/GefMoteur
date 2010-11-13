@@ -1,8 +1,8 @@
 #ifndef GEFMOTEUR_GEFSYSTEMSFML_HPP
 #define GEFMOTEUR_GEFSYSTEMSFML_HPP
 
-#if @HAVE_SFML_GRAPHICS_HPP@ 
-#if @HAVE_SFML_SYSTEM_HPP@
+//#if @HAVE_SFML_GRAPHICS_HPP@ 
+//#if @HAVE_SFML_SYSTEM_HPP@
 
 #include <GefMoteur/GefSystem.hpp>
 #include <SFML/System.hpp>
@@ -37,7 +37,7 @@ namespace GefSystemSfml
 }; // GefSystemSfml
 }; // GefMoteur
 
-#endif // HAVE_SFML_SYSTEM_HPP
-#endif // HAVE_SFML_GRAPHICS_HPP
+//#endif // HAVE_SFML_SYSTEM_HPP
+//#endif // HAVE_SFML_GRAPHICS_HPP
 #endif // GEFMOTEUR_GEFSYSTEM_HPP
 

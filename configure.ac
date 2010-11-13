@@ -49,7 +49,7 @@ AC_CHECK_HEADERS([SFML/Network.hpp])
 AC_CHECK_LIB([sfml-audio], [main])
 AC_CHECK_HEADERS([SFML/Audio.hpp])
 
-AM_CONDITIONAL(HAVE_SFML,HAVE_SFML)
+AM_CONDITIONAL(HAVE_SFML,test HAVE_SFML=1)
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_HEADER_STDBOOL
@@ -61,7 +61,6 @@ AC_FUNC_MALLOC
 
 AC_CONFIG_FILES([Makefile
 	src/Makefile
-	include/GefMoteur/Makefile
 	test/testsfml/Makefile])
 
 #AC_CONFIG_FILES([Makefile

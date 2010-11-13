@@ -1,4 +1,4 @@
-SUBDIRS=include/GefMoteur src
+SUBDIRS=src
 
 testsfml: install
 	make -C test/testsfml

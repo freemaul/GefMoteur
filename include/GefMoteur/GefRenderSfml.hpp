@@ -1,7 +1,7 @@
 #ifndef GEFMOTEUR_GEFRENDERSFML_HPP
 #define GEFMOTEUR_GEFRENDERSFML_HPP
 
-#if @HAVE_SFML_GRAPHICS_HPP@
+//#if @HAVE_SFML_GRAPHICS_HPP@
 
 #include <GefMoteur/GefRender.hpp>
 #include <SFML/Graphics.hpp>
@@ -64,6 +64,6 @@ namespace GefRenderSfml
 }; // GefRender
 }; // GefMoteur
 
-#endif // HAVE_SFML_GRAPHICS_HPP
+//#endif // HAVE_SFML_GRAPHICS_HPP
 #endif
 
